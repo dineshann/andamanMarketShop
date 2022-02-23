@@ -1,0 +1,139 @@
+.pro-detail {
+    .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $cdark;
+        span {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $cyellow;
+        }
+    }
+    .detail {
+        margin-bottom: 1rem;
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        h5 {
+            color: $cyellow;
+            font-weight: 600;
+        }
+    }
+}
+
+.gs-form {
+    padding: 2rem 3rem 2rem 2rem;
+    &__heading {
+        h4 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: $cdark;
+        }
+        h5 {
+            font-size: 1.2rem;
+            color: $cdark;
+        }
+        h6 {
+            color: $cyellow;
+            font-size: 1.1rem;
+        }
+    }
+    &__form {
+        position: relative;
+        padding: 2rem;
+        border: 1px solid $cgrey;
+        border-radius: $border12;
+        margin-top: 1.2rem;
+        @include box-shadow($img-bs);
+        h5 {
+            text-align: center;
+            font-weight: 600;
+            color: $cdark;
+        }
+
+        form {
+            .form-group {
+                margin-bottom: 0.5rem;
+                label {
+                    color: $cdark;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    margin-bottom: 0.2rem;
+                }
+
+                textarea {
+                    &.form-control {
+                        min-height: 120px;
+                    }
+                }
+
+                .form-control {
+                    padding: 0.25rem 0.5rem;
+                    border: 1px solid #818589;
+                    height: calc(1.2em + 0.75rem + 2px);
+                    display: block;
+                    width: 100%;
+                    border-radius: $border4;
+                    &.nice-select {
+                        .list {
+                            width: 100%;
+                        }
+                    }
+                    .current {
+                        color: $cdark;
+                        padding: 0.2rem;
+                    }
+                    &:focus,
+                    &:active {
+                        outline: none;
+                        border-color: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .med-btn {    
+                margin: 1.2rem auto 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    #pic {
+        display: none;
+    }
+
+    .newbtn {
+        cursor: pointer;
+    }
+
+    #blah {
+        max-width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    &__content {
+        position: relative;
+        border-left: 1px solid #cdcdcd;
+        padding-left: 2.5rem;
+        h4 {
+            font-size: 1.25rem;
+            text-align: left;
+            font-weight: 600;
+            color: $cdark;
+        }
+        h5 {
+            font-size: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: $cdark;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0.5rem;
+        }
+    }
+}

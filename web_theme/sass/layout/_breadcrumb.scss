@@ -1,0 +1,212 @@
+.hero-section {
+    position: relative;
+    margin-top: 0;
+    &.hero-background {
+        height: 440px;
+        @include background-img-cover;
+        background-attachment: scroll;
+        &.small {
+            height: 140px;
+            .top-title {
+                top: 0px;
+                padding-top: 1.5rem;
+                z-index: 1;
+                h5 {
+                    font-size: 1.2rem;
+                    color: #ffffff;
+                    font-weight: 700;
+                    margin-bottom: -2rem;
+                    text-align: left;
+                    padding-left: 5rem;
+                    @include lg-down {
+                        font-size: 1.8rem;
+                        margin-bottom: -1rem;
+                        padding-left: 5rem;
+                    }
+                }
+                h1 {
+                    font-size: 3.4rem;
+                    margin-top: 1rem;                
+                    @include lg-down {
+                        font-size: 2.4rem;
+                    }
+                }
+                h3 {
+                    font-size: 1,5rem;
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        &:before {
+            content: "";
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .navbar{
+        padding-top: 0;
+        z-index: 10;
+        &.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            left: 0;
+            box-shadow: 0 2rem 1.5rem -1.5rem rgba(33, 37, 41, 0.08), 0 0 1.5rem 0.5rem rgba(33, 37, 41, 0.05);
+            .navbar-brand {
+                padding: 0.25rem;
+                img {
+                    width: 140px;
+                }
+            }
+            .navbar-nav {
+                align-items: flex-end;
+                .nav-item {
+                    .nav-link {
+                        color: $cdark;
+                        
+                        &:hover {
+                            color: $cyellow;
+                        }
+                    }
+                }
+            }
+        }
+        &-brand {
+            background-color: white;
+            border-radius: 0 0 $border8 $border8;
+            padding: 1rem;
+            img {
+                width: 200px;
+            }
+        }
+        &-toggler {
+            background-color: white;
+            i {
+                font-size: 2rem;
+            }
+        }
+        &-collapse {
+            .navbar-nav {
+                align-items: flex-end;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: white;
+                        padding: 0.5rem 0.65rem;
+                        margin: 0 0.25rem;
+                        border-radius: $border4;
+                        background-color: rgba($color: #ffffff, $alpha: 0.25);
+                        -moz-transition: 0.15s box-shadow ease, 0.15s transform ease;
+                        transition: 0.15s box-shadow ease, 0.15s transform ease;
+                        @include box-shadow($icon-bs);
+                        
+                        &:hover {
+                            background-color: white;
+                            color: $cyellow;
+                            transform: translateY(-0.25rem);
+                            @include box-shadow($icon-bsh);
+                        }
+                    }
+                }
+            }
+            
+            @include lg-down {
+                background-color: white;
+                .navbar-nav {
+                    align-items: flex-start;
+                    .nav-item {
+                        display: block;
+                        width: 100%;
+                        text-align: left;
+                        .nav-link {
+                            color: $cdark;
+                            display: block;
+                            padding: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+        @include lg-down {
+            background-color: white;
+            z-index: 10;
+        }
+    }
+    .top-title {
+        align-items: center;
+        justify-content: space-around;
+        height: inherit;
+        max-width: 550px;
+        margin: 0 auto;
+        position: relative;
+        top: -110px;
+        padding-top: 11.5rem;
+        z-index: 1;
+        h5 {
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: -2rem;
+            text-align: left;
+            padding-left: 5rem;
+            @include lg-down {
+                font-size: 1.8rem;
+                margin-bottom: -1rem;
+                padding-left: 5rem;
+            }
+        }
+        h1 {
+            font-size: 6rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 0;
+            @include lg-down {
+                font-size: 4rem;
+            }
+        }
+        h3 {
+            font-size: 6rem;
+            color: #ffffff;
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 0;
+            margin-top: 0;
+            display: flex;
+            align-items: unset;
+            justify-content: center;
+            span {
+                position: relative;
+                font-size: 3rem;
+                color: #ffffff;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .thanks-side {
+        position: absolute;
+        bottom: 2rem;
+        right: 4rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: white;
+        max-width: 250px;
+        @include lg-down {
+            position: absolute;
+            bottom: 10px;
+            max-width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+    }
+}

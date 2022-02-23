@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Andamanmarket.shop - Home</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/main-color.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/home-11.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/custom_css.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/plugins/sweetalert/sweetalert.css">
+
+    <!-- CSS - 19 May 2020 - Dinesh -->
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/customSass.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./web_theme/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./web_theme/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./web_theme/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./web_theme/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./web_theme/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./web_theme/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./web_theme/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./web_theme/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./web_theme/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./web_theme/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./web_theme/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./web_theme/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./web_theme/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./web_theme/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./web_theme/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <script src="./web_theme/js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body class="biolife-body" onload="getLocation()">
+
+    <!-- Preloader -->
+    <div id="biof-loading">
+        <div class="biof-loading-center">
+            <div class="biof-loading-center-absolute">
+                <div class="dot dot-one"></div>
+                <div class="dot dot-two"></div>
+                <div class="dot dot-three"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header" class="header-area lv-header style-01 layout-03">
+        <!-- Top info Bar -->   
+        <div class="header-top bg-main d-none d-sm-block d-md-block d-lg-block d-xl-block">
+            <div class="container">
+                <div class="top-bar left">
+                    <ul class="horizontal-menu">
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>support@andamanmarket.shop</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar right">
+                    <ul class="horizontal-menu">
+                        <li>
+                            <!--<a href="./home/login" class="login-link"><i class="fa fa-map-marker"></i>Location</a>-->
+                            <div class="dropdown">
+                                <a class="login-link dropdown-toggle"  href="#" role="button" id="changelocdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-map-marker"></i> 
+                                    <span id="customer_loc"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu changelocdropdown" aria-labelledby="changelocdropdown">
+                                    <div class="locbox" id="test">
+                                        <div class="">
+                                            <form action="#" class="form-search" name="desktop-seacrh" method="get">
+                                                <input type="text" name="s" class="input-text autocomplete" value=""
+                                                    placeholder="Enter your location, City, Pincode">
+
+                                            </form>
+                                            <button type="button" onclick="detect_location()"
+                                                class="btn ">Detect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="horz-menu-item currency">
+                            <select name="currency">
+                                <option value="eur">₹ INR (Rupee)</option>
+                            </select>
+                        </li>
+                        <li class="horz-menu-item lang">
+                            <select name="language">
+                                <option value="en" selected>English</option>>
+                            </select>
+                        </li>
+
+                        <li>
+                            <a href="./home/login" class="login-link">
+                                <i class="biolife-icon icon-login"></i>
+                                Login/Register
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo and Contact sec -->
+        <div class="header-middle biolife-sticky-object">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-5">
+                        <a href="index.html" class="biolife-logo">
+                            <img src="./uploads/logo/andamanmarketlogo.png" alt="Logo" />
+                        </a>
+                    </div>
+                    <div class="col-lg-4 d-none d-sm-none d-md-none d-lg-flex d-xl-flex align-items-center justify-content-end">
+                        <div class="header-search-bar layout-01">
+                            <form action="#" class="form-search" name="desktop-seacrh" method="get">
+                                <input type="text" name="s" class="input-text homesearchinput" value="" placeholder="search for items you wanna share" autocomplete="off">
+
+                                <button type="button" class="btn-submit"><i class="biolife-icon icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-7 mt-3 mt-md-0">
+                        <div class="biolife-cart-info">
+                            <div class="mobile-search">
+                                <a href="javascript:void(0)" class="open-searchbox"><i
+                                        class="biolife-icon icon-search"></i></a>
+                                <div class="mobile-search-content">
+                                    <form action="#" class="form-search" name="mobile-seacrh" method="get">
+                                        <a href="#" class="btn-close"><span
+                                                class="biolife-icon icon-close-menu"></span></a>
+                                        <input type="text" name="s" class="input-text" value=""
+                                            placeholder="Search here...">
+                                        <select name="category">
+                                            <option value="-1" selected>All Categories</option>
+                                            <option value="fruits-vegetables">Fruits & Vegetables</option>
+                                            <option value="foodgrains-oil-masala">Foodgrains, Oil & Masala</option>
+                                            <option value="baby-care">Baby Care</option>
+                                            <option value="beverages">Beverages</option>
+                                            <option value="bakery-cakes-dairy">Bakery, Cakes & Dairy</option>
+                                            <option value="beauty-hygiene">Beauty & Hygiene</option>
+                                            <option value="cleaning-household">Cleaning & Household</option>
+                                            <option value="snacks-branded-foods">Snacks & Branded Foods</option>
+                                            <option value="kitchen-garden-pets">Kitchen, Garden & Pets</option>
+                                            <option value="eggs-meat-fish">Eggs, Meat & Fish</option>
+                                            <option value="gourmet-world-food">Gourmet & World Food</option>
+                                        </select>
+                                        <button type="submit" class="btn-submit">go</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="miniwishlist-contain minicart-block">
+                                <a href="javascript:void(0)" class="link-whishlist link-to ml-3">
+                                    <span class="icon-qty-combine">
+                                        <i class="icofont-location-arrow biolife-icon"></i>
+                                    </span>
+                                    <div class="d-block">
+                                        <span class="heading">Delivery to</span>
+                                        <span class="title">560029</span>
+                                    </div>
+                                </a>
+                                <div class="cart-content">
+                                    <div class="cart-inner">
+                                        <div class="location-box" id="test">
+                                            <form action="#" class="form-search" name="" method="get">
+                                                <input type="text" name="location" class="form-control" value=""
+                                                    placeholder="Enter your drop location or pincode">
+                                            </form>
+                                        </div>
+                                        <p class="btn-control cartbtns">
+                                            <a href="#" class="btn btn-block view-cart" style="width: 100%;">Detect</a>
+                                            <a href="#" class="btn btn-link text-dark" data-toggle="modal" data-target="#enterAddress">Click here to enter drop address</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="miniwishlist-contain minicart-block">
+                                <a href="javascript:void(0)" class="link-whishlist link-to ml-3">
+                                    <span class="icon-qty-combine">
+                                        <i class="icofont-heart biolife-icon"></i>
+                                        <span class="qty"><span class="httcartitem">0</span></span>
+                                    </span>
+                                    <span class="title">Wishlist</span>
+                                </a>
+                                <div class="cart-content">
+                                    <div class="cart-inner">
+                                        <ul class="products usercartItems">
+                                            <li>
+                                                <div class="minicart-item">
+                                                    <div class="thumb">
+                                                        <a href="#">
+                                                            <img src="./web_theme/img/loveshare/product/love_prod_2@2x.jpg" width="80" height="80" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="left-info">
+                                                        <div class="product-title">
+                                                            <a href="#" class="product-name">Red Velvet Cake</a>
+                                                        </div>
+                                                        <div class="price">
+                                                            <ins><span class="price-amount"><span class="currencySymbol">₹</span>150.00</span></ins>
+                                                            <del><span class="price-amount"><span class="currencySymbol">₹</span>200.00</span></del>
+                                                        </div>
+                                                        <div class="qty">
+                                                            <label for="cart[4][qty]">Qty:</label>
+                                                            <input type="number" class="input-qty" name="cart[4][qty]" id="" value="1" disabled="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="action">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="minicart-item">
+                                                    <div class="thumb">
+                                                        <a href="#">
+                                                            <img src="./web_theme/img/loveshare/product/love_prod_3@2x.jpg" width="80" height="80" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="left-info">
+                                                        <div class="product-title">
+                                                            <a href="#" class="product-name">Women Brown Shopper</a>
+                                                        </div>
+                                                        <div class="price">
+                                                            <ins><span class="price-amount"><span class="currencySymbol">₹</span>230.00</span></ins>
+                                                            <del><span class="price-amount"><span class="currencySymbol">₹</span>250.00</span></del>
+                                                        </div>
+                                                        <div class="qty">
+                                                            <label for="cart[4][qty]">Qty:</label>
+                                                            <input type="number" class="input-qty" name="cart[4][qty]" id="" value="1" disabled="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="action">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="btn-control cartbtns">
+                                            <a href="#" class="btn view-cart">Add to cart</a>
+                                            <a href="#" class="btn">view list</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="minicart-block">
+                                <div class="minicart-contain">
+                                    <a href="javascript:void(0)" class="link-to">
+                                        <span class="icon-qty-combine">
+                                            <i class="icofont-cart-alt biolife-icon"></i>
+                                            <span class="qty"><span class="httcartitem">0</span></span>
+                                        </span>
+                                        <span class="title">My Cart</span>
+                                        <span class="sub-total d-none">- ₹ <span class="ttlcartamt">0.00</span></span>
+                                    </a>
+                                    <div class="cart-content">
+                                        <div class="cart-inner">
+                                            <ul class="products usercartItems">
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#">
+                                                                <img src="./web_theme/img/loveshare/product/love_prod_1@2x.jpg" width="80" height="80" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title">
+                                                                <a href="#" class="product-name">Flower</a>
+                                                            </div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">₹</span>130.00</span></ins>
+                                                                <del><span class="price-amount"><span class="currencySymbol">₹</span>130.00</span></del>
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[4][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[4][qty]" id="" value="1" disabled="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="javascript:void(0)">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p class="btn-control cartbtns">
+                                                <a href="#" class="btn view-cart">view cart</a>
+                                                <a href="#" class="btn">checkout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-toggle">
+                                <a class="btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom d-none d-sm-none d-md-none d-lg-block d-xl-block" id="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="vertical-menu vertical-category-block">
+                            <div class="block-title">
+                                <span class="menu-icon">
+                                    <span class="line-1"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-3"></span>
+                                </span>
+                                <span class="menu-title">Browse Categories</span>
+                                <span class="angle" data-tgleclass="fa fa-caret-down"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            </div>
+
+                            <div class="wrap-menu">
+                                <ul class="menu clone-main-menu categorymenu">
+
+                                    <li class="menu-item">
+                                        <a href="#" class="menu-name" data-title="Flower">
+                                            <img src="./web_theme/img/loveshare/category/flowers.png" alt="" />
+                                            Flower
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="menu-name" data-title="Card">
+                                            <img src="./web_theme/img/loveshare/category/invitation.png" alt="" />
+                                            Greeting card
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 padding-top-2px">
+                        <nav class="navbar lv-navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="icofont-navigation-menu"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Flower <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Personalised Gifts</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Combos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Occasions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Deals</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="donate.html">Donate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Delivery Address -->
+    <div class="modal fade" id="enterAddress" tabindex="-1" role="dialog" aria-labelledby="enterAddressLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icofont-close"></i></span>
+                    </button>
+                    <div class="container">
+                        <div class="book-app">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <h4>Enter Drop Address</h4>
+                                    <div class="book-app__form" style="border: none; padding-left: 0;">
+                                        <form class="form">
+                                            <div class="form-group">
+                                                <label for="fullName">Full name</label>
+                                                <input type="text" class="form-control"
+                                                    id="fullName"
+                                                    placeholder="Enter full name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile">Moble Number</label>
+                                                <input type="tel" class="form-control"
+                                                    id="mobile"
+                                                    placeholder="Enter Mobile Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lastname">Address</label>
+                                                <textarea name="" class="form-control" id="" cols="30" rows="8" placeholder="Enter full address"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="date">Select date of delivery </label>
+                                                <input type="date" class="form-control" id="date"
+                                                    placeholder="Pick Date">
+                                            </div>
+                                            <div class="form-group mb-5">
+                                                <label for="time">Preferred time of delivery</label>
+                                                <select id="time" class="form-control">
+                                                    <option selected>Select Delivery Time</option>
+                                                    <option>09:00am - 10:00am</option>
+                                                    <option>10:00am - 11:00am</option>
+                                                    <option>11:00am - 12:00pm</option>
+                                                    <option>12:00pm - 01:00pm</option>
+                                                    <option>01:00pm - 02:00pm</option>
+                                                    <option>02:00pm - 03:00pm</option>
+                                                    <option>04:00pm - 04:00pm</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="med-btn">
+                                                <a href="#" class="btn btn-block btn-fav mb-2">Add to favorites</a>
+                                                <a href="#" class="btn btn-block btn-animate">Save and continue as Guest</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="reg_opt_modal" tabindex="-1" role="dialog" aria-labelledby="rtmodal-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered rt-lgoinmodal " role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="rt-modal-headr rt-mb-20">
+                        <h3>Registration OTP</h3>
+                        <p>Thank you for registering with Andmanmarket.shop. We have sent OTP to your phone number
+                            <b><span id="otpphn"></span></b> please input Below</p>
+                    </div><!-- /.rt-modal-headr -->
+                    <div class="rt-modal-input">
+                        <form action="#" class="rt-form" id="otpfrm">
+                            <input type="hidden" name="user_id" id="registered_user_id" value="" />
+                            <input type="hidden" name="from_pg" id="from_pg_1" value="" />
+                            <div class="otpbox">
+                                <input type="text" class="form-control pill rt-mb-15 otpnum" name="otp[]"
+                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                    maxlength="1">
+                                <input type="text" class="form-control pill rt-mb-15 otpnum" name="otp[]"
+                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                    maxlength="1">
+                                <input type="text" class="form-control pill rt-mb-15 otpnum" name="otp[]"
+                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                    maxlength="1">
+                                <input type="text" class="form-control pill rt-mb-15 otpnum" name="otp[]"
+                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                    maxlength="1">
+
+                                <div class="clearfix resendbox">
+                                    <label class="form-check-label">
+                                        Wait for 5 min
+                                    </label>
+                                    <span class="pull-right" style="float:right;font-weight: 600;"><a
+                                            href="javascript:void(0)" onclick="resendotp()">Resend</a></span>
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div id="otperrormsg"></div>
+
+                            <button type="submit" name="submit" value="1" class="btn btn-submit btn-bold"
+                                style="width: 234px; margin-top: 31px;">Submit</button>
+
+                            <br /><br />
+                        </form>
+                        <div id="regSuccess" style="display:none;">
+                            <div role="alert" class="alert alert-success alert-dismissible">You have registered
+                                successfully! Please login to proceed booking. <br /> Click <a href="./home/login"
+                                    class="loginshow">Here to LOGIN <i class="icofont-double-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="forgotPasswordModel" tabindex="-1" role="dialog" aria-labelledby="rtmodal-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered rt-lgoinmodal " role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="rt-modal-headr rt-mb-20">
+                        <h4>Forgot password?</h4>
+                        <p>Please enter your email id to reset your password</p>
+                    </div><!-- /.rt-modal-headr -->
+                    <div class="rt-modal-input">
+                        <form action="#" class="rt-form" id="forgotPsssfrm">
+                            <input type="hidden" name="user_id" id="registered_user_id" value="" />
+
+                            <input type="text" class="form-control pill rt-mb-15 " name="email">
+
+                            <div class="clearfix"></div>
+                            <div id="fpmsg"></div>
+                            <br />
+                            <button type="submit" name="submit" value="1" class="btn custombtn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Contain -->
+    <div class="page-contain">
+        <!-- Main content -->
+        <div id="main-content donate-page" class="main-content">
+            <section class="donate-top" style="background-image: url(./web_theme/img/loveshare/donation_bg@2x.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="donate-top__head">DONATE LOVE AND CARE</h3>
+                            <p class="donate-top__dec">A Program Set Up to Provide Help and Food for Those in Need.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="sm-margin-top-40px"></div>
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="donate-cont">
+                            <h2>Feed the poor on your special occasion.</h2>
+                            <p>
+                                According to the oldest traditions, filling hunger is the most
+                                significant gift a man can ever give for another person. The
+                                blessings will create positive vibes across the person.
+                                Instead of spending money on artificial products, we donate
+                                the cost/food, and we will deliver it to the needy people.
+                                Whether it’s a wedding party or birthday of your loved ones,
+                                feed the guests as well as can donate a small part for charity
+                                persons.
+                            </p>
+                            <p>
+                                If you wish to celebrate the special occasion amidst the
+                                children’s in an orphanage or an old-age home, then we will
+                                arrange the decorative and requirements for the celebrations.
+                                Surprise with the gift that remains memorable throughout life.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./web_theme/img/loveshare/donate_side_img@2x.png" alt="">
+                    </div>
+                </div>
+
+                <div class="sm-margin-top-60px"></div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="donate-btm">
+                            <h2>Lets witness the ultimate joy on your day!</h2>
+                            <h4>Plan with us and we make it memorable.</h4>
+                            <a href="#" class="btn btn-animate">GET A CALLBACK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm-margin-top-100px"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer layout-03">
+        <div class="footer-content background-footer-03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-9">
+                        <section class="footer-item">
+                            <a href="index.html" class="logo footer-logo"><img
+                                    src="./uploads/logo/andamanmarketlogo.png" alt="Logo" width="200" height="auto"></a>
+                            <div class="footer-phone-info">
+                                <i class="biolife-icon icon-head-phone"></i>
+                                <a href="tel:+919632692619" class="r-info">
+                                    <span>Got Questions ?</span>
+                                    <span>+91 9632692619</span>
+                                </a>
+                            </div>
+                            <div class="newsletter-block layout-01">
+                                <h4 class="title">Newsletter Signup</h4>
+                                <div class="form-content">
+                                    <form action="#" name="new-letter-foter">
+                                        <input type="email" class="input-text email" value=""
+                                            placeholder="Your email here...">
+                                        <button type="submit" class="bnt-submit" name="ok">Sign up</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                            <h3 class="section-title">Useful Links</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-6">
+                                    <div class="wrap-custom-menu vertical-menu-2">
+                                        <ul class="menu">
+                                            <li><a href="./home/about_us">About Us</a></li>
+                                            <li><a href="./home/terms_conditions">Terms & Conditions</a></li>
+                                            <li><a href="./home/privay_policy">Privacy Policy</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-6">
+                                    <div class="wrap-custom-menu vertical-menu-2">
+                                        <ul class="menu">
+                                            <li><a href="./home/about_us">Who We Are</a></li>
+                                            <li><a href="#">Our Services</a></li>
+                                            <li><a href="./home/contact_us">Contacts Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12 newsletter-block layout-01">
+                                    <h4 class="title mb-3">Download from</h4>
+                                    <div class="d-flex">
+                                        <div class="appStore-footer mr-2">
+                                            <div class="icon">
+                                                <a href="#">
+                                                    <img src="web_theme/img/android.svg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="appStore-footer ml-2">
+                                            <div class="icon">
+                                                <a href="#">
+                                                    <img src="web_theme/img/apple.svg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                            <h3 class="section-title">Transport Offices</h3>
+                            <div class="contact-info-block footer-layout xs-padding-top-10px">
+                                <ul class="contact-lines">
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-location"></i>
+                                            <b class="desc">No:251, Port Blair, South Andaman - 744103 </b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-phone"></i>
+                                            <a href="tel:+919632692619"><b class="desc">Phone: +91 9632692619</b></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-letter"></i>
+                                            <b class="desc">Email: support@andamanmarket.shop</b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-clock"></i>
+                                            <b class="desc">Hours: 7 Days a week from 09:00 am</b>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="biolife-social inline">
+                                <h5 class="title">Follow Us</h5>
+                                <ul class="socials">
+                                    <li><a href="#" title="twitter" class="socail-btn"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Andmanmarketshop-100485584992560/?modal=admin_todo_tour"
+                                            title="facebook" class="socail-btn"><i class="fa fa-facebook"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/andamanmarket-shop/about/?viewAsMember=true"
+                                            title="linkedin" class="socail-btn"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" title="youtube" class="socail-btn"><i class="fa fa-youtube"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.instagram.com/andamanmarket.shop/?hl=en" title="instagram"
+                                            class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="separator sm-margin-top-40px xs-margin-top-40px"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="copy-right-text">
+                            Copyright &copy; <script>
+                                document.write(new Date().getFullYear());
+                            </script> <a href="http://andamanmarket.shop/" target="_blank">Andamanmarket Shop.</a>
+                            | Powered by: <a href="https://www.annantasource.com/">Annanta Source, LLC.</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-6 col-12">
+                        <div class="payment-methods">
+                            <ul>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card1.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card2.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card3.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card4.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card5.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card6.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card7.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card8.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card9.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card10.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Footer For Mobile-->
+    <div class="mobile-footer">
+        <div class="mobile-footer-inner">
+            <div class="mobile-block block-menu-main">
+                <a class="menu-bar menu-toggle btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
+                    <span class="fa fa-bars"></span>
+                    <span class="text">Menu</span>
+                </a>
+            </div>
+            <div class="mobile-block block-sidebar">
+                <a class="menu-bar filter-toggle btn-toggle" data-object="open-mobile-filter" href="javascript:void(0)">
+                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                    <span class="text">Sidebar</span>
+                </a>
+            </div>
+            <div class="mobile-block block-minicart">
+                <a class="link-to-cart" href="#">
+                    <span class="fa fa-shopping-bag" aria-hidden="true"></span>
+                    <span class="text">Cart</span>
+                </a>
+            </div>
+            <div class="mobile-block block-global">
+                <a class="menu-bar myaccount-toggle btn-toggle" data-object="global-panel-opened"
+                    href="javascript:void(0)">
+                    <span class="fa fa-globe"></span>
+                    <span class="text">Global</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Mobile Global Menu-->
+    <div class="mobile-block-global">
+        <div class="biolife-mobile-panels">
+            <span class="biolife-current-panel-title">Global</span>
+            <a class="biolife-close-btn" data-object="global-panel-opened" href="#">&times;</a>
+        </div>
+        <div class="block-global-contain">
+            <div class="glb-item my-account">
+                <b class="title">My Account</b>
+                <ul class="list">
+                    <li class="list-item"><a href="#">Login/register</a></li>
+                    <li class="list-item"><a href="#">Wishlist <span class="index">(8)</span></a></li>
+                    <li class="list-item"><a href="#">Checkout</a></li>
+                </ul>
+            </div>
+            <div class="glb-item currency">
+                <b class="title">Currency</b>
+                <ul class="list">
+                    <li class="list-item"><a href="#">€ EUR (Euro)</a></li>
+                    <li class="list-item"><a href="#">$ USD (Dollar)</a></li>
+                    <li class="list-item"><a href="#">£ GBP (Pound)</a></li>
+                    <li class="list-item"><a href="#">¥ JPY (Yen)</a></li>
+                </ul>
+            </div>
+            <div class="glb-item languages">
+                <b class="title">Language</b>
+                <ul class="list inline">
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/us.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/fr.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/ger.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/jap.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo" id="demo"></div>
+    <!-- Scroll Top Button -->
+    <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
+    
+    <!-- Social Media & Certified Logo -->
+    <ul class="kt-sticky-toolbar">
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-fb">
+                <i class="fa fa-facebook"></i>
+                <a href="#" target="_blank">
+                    Like us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-tw">
+                <i class="fa fa-twitter"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-tw">
+                <i class="fa fa-linkedin"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-yp">
+                <i class="fa fa-youtube-play"></i>
+                <a href="#"
+                    target="_blank">
+                    Watch Us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-ig">
+                <i class="fa fa-instagram"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#">
+                <i class="icofont-full-sunny mb-2"></i>
+                <b>35 °C</b>
+            </a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="logo_icon_1"><img src="web_theme/img/logo_secureTrust.png" alt=""></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="logo_icon_2"><img src="web_theme/img/logo_norton.png" alt=""></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="">
+                <img src="web_theme/img/privacy.png" alt="" />
+                <span>Data Privacy &amp; Security</span>
+            </a>
+        </li>
+    </ul>
+
+    <script src="./web_theme/js/bootstrap.js"></script>
+    <script src="./web_theme/js/jquery-ui.min.js"></script>
+    <script src="./web_theme/js/jquery.countdown.min.js"></script>
+    <script src="./web_theme/js/jquery.nice-select.min.js"></script>
+    <script src="./web_theme/js/jquery.nicescroll.min.js"></script>
+    <script src="./web_theme/js/slick.min.js"></script>
+    <script src="./web_theme/js/biolife.framework.js"></script>
+    <script src="./web_theme/js/functions.js"></script>
+    <script src="./web_theme/js/jquery.validate.min.js"></script>
+    <script src="./web_theme/plugins/sweetalert/sweetalert.js"></script>
+    <script src="./web_theme/js/userauth.js"></script>
+    <script src="./web_theme/js/custom_js.js"></script>
+    <script src="./web_theme/js/jquery.cookie.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4-NHBgBOt179DW_BBjabNsAprlKQx3-Q&libraries=places&callback=initialize"
+        async defer></script>
+
+</body>
+</html>

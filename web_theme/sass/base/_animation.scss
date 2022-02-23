@@ -1,0 +1,149 @@
+body {
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: lighten($color: black, $amount: 80%);
+    }
+}
+
+$anime-time: 8s;
+
+$box-size: 64px;
+$clip-distance: .05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 2px;
+
+%full-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@keyframes clipMe {
+
+    0%,
+    100% {
+        clip: rect(0px, $clip-size, $path-width, 0px);
+    }
+
+    25% {
+        clip: rect(0px, $path-width, $clip-size, 0px);
+    }
+
+    50% {
+        clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px);
+    }
+
+    75% {
+        clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width);
+    }
+}
+
+@-webkit-keyframes scale-up-center
+{
+    0%
+    {
+        -webkit-transform: scale(.5);
+                transform: scale(.5);
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center
+{
+    0%
+    {
+        -webkit-transform: scale(.5);
+                transform: scale(.5);
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+// Wishlist
+
+
+@keyframes bubble {
+    15% {
+        border-color: #cc8ef5;
+        border-width: $bubble-r;
+        transform: scale(1);
+    }
+
+    30%,
+    100% {
+        border-color: #cc8ef5;
+        border-width: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes bubble {
+    15% {
+        @include bubble($bubble-r);
+    }
+
+    30%,
+    100% {
+        @include bubble(0);
+    }
+}
+
+// Msg Box Animation
+@keyframes bounce {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+        left: 25%;
+    }
+
+    50% {
+        left: 60%;
+        transform: rotate(168deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        left: 25%;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 25%;
+    }
+
+    50% {
+        left: 60%;
+    }
+
+    100% {
+        left: 25%;
+    }
+}

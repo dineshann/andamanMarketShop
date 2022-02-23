@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Andamanmarket.shop - Home</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/main-color.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/home-11.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/custom_css.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/plugins/sweetalert/sweetalert.css">
+
+    <!-- CSS - 19 May 2020 - Dinesh -->
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="./web_theme/css/customSass.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./web_theme/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./web_theme/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./web_theme/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./web_theme/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./web_theme/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./web_theme/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./web_theme/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./web_theme/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./web_theme/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./web_theme/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./web_theme/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./web_theme/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./web_theme/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./web_theme/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./web_theme/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <script src="./web_theme/js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body class="biolife-body" onload="getLocation()">
+
+    <!-- Preloader -->
+    <div id="biof-loading">
+        <div class="biof-loading-center">
+            <div class="biof-loading-center-absolute">
+                <div class="dot dot-one"></div>
+                <div class="dot dot-two"></div>
+                <div class="dot dot-three"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <!-- HEADER -->
+    <header id="header" class="header-area lv-header style-01 layout-03">
+        <!-- Top info Bar -->   
+        <div class="header-top bg-main d-none d-sm-block d-md-block d-lg-block d-xl-block">
+            <div class="container">
+                <div class="top-bar left">
+                    <ul class="horizontal-menu">
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>support@andamanmarket.shop</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar right">
+                    <ul class="horizontal-menu">
+                        <li>
+                            <!--<a href="./home/login" class="login-link"><i class="fa fa-map-marker"></i>Location</a>-->
+                            <div class="dropdown">
+                                <a class="login-link dropdown-toggle"  href="#" role="button" id="changelocdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-map-marker"></i> 
+                                    <span id="customer_loc"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu changelocdropdown" aria-labelledby="changelocdropdown">
+                                    <div class="locbox" id="test">
+                                        <div class="">
+                                            <form action="#" class="form-search" name="desktop-seacrh" method="get">
+                                                <input type="text" name="s" class="input-text autocomplete" value=""
+                                                    placeholder="Enter your location, City, Pincode">
+
+                                            </form>
+                                            <button type="button" onclick="detect_location()"
+                                                class="btn ">Detect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="horz-menu-item currency">
+                            <select name="currency">
+                                <option value="eur">₹ INR (Rupee)</option>
+                            </select>
+                        </li>
+                        <li class="horz-menu-item lang">
+                            <select name="language">
+                                <option value="en" selected>English</option>>
+                            </select>
+                        </li>
+
+                        <li>
+                            <a href="./home/login" class="login-link">
+                                <i class="biolife-icon icon-login"></i>
+                                Login/Register
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo and Contact sec -->
+        <div class="header-middle biolife-sticky-object">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-5">
+                        <a href="index.html" class="biolife-logo">
+                            <img src="./uploads/logo/andamanmarketlogo.png" alt="Logo" />
+                        </a>
+                    </div>
+                    <div class="col-lg-4 d-none d-sm-none d-md-none d-lg-flex d-xl-flex align-items-center justify-content-center">
+                        <div class="header-search-bar layout-01">
+                            <form action="#" class="form-search" name="desktop-seacrh" method="get">
+                                <input type="text" name="s" class="input-text homesearchinput" value="" placeholder="search for items you wanna share" autocomplete="off">
+
+                                <button type="button" class="btn-submit"><i class="biolife-icon icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-7 mt-3 mt-md-0">
+                        <div class="biolife-cart-info">
+                            <div class="mobile-search">
+                                <a href="javascript:void(0)" class="open-searchbox"><i
+                                        class="biolife-icon icon-search"></i></a>
+                                <div class="mobile-search-content">
+                                    <form action="#" class="form-search" name="mobile-seacrh" method="get">
+                                        <a href="#" class="btn-close"><span
+                                                class="biolife-icon icon-close-menu"></span></a>
+                                        <input type="text" name="s" class="input-text" value=""
+                                            placeholder="Search here...">
+                                        <select name="category">
+                                            <option value="-1" selected>All Categories</option>
+                                        </select>
+                                        <button type="submit" class="btn-submit">go</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="minicart-block">
+                                <div class="minicart-contain">
+                                    <a href="liveKitchen_getInvolved.html" title="Get Involve" class="link-to">
+                                        <span class="icon-qty-combine">
+                                            <i class="icofont-handshake-deal biolife-icon"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="miniwishlist-contain minicart-block">
+                                <a href="javascript:void(0)" class="link-whishlist link-to ml-3">
+                                    <span class="icon-qty-combine">
+                                        <i class="icofont-location-arrow biolife-icon"></i>
+                                    </span>
+                                    <div class="d-block">
+                                        <span class="heading">Delivery to</span>
+                                        <span class="title">560029</span>
+                                    </div>
+                                </a>
+                                <div class="cart-content">
+                                    <div class="cart-inner">
+                                        <div class="location-box" id="test">
+                                            <form action="#" class="form-search" name="" method="get">
+                                                <input type="text" name="location" class="form-control" value=""
+                                                    placeholder="Enter your drop location or pincode">
+                                            </form>
+                                        </div>
+                                        <p class="btn-control cartbtns">
+                                            <a href="#" class="btn btn-block view-cart" style="width: 100%;">Detect</a>
+                                            <a href="#" class="btn btn-link text-dark">Click here to enter drop address</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="minicart-block">
+                                <div class="minicart-contain">
+                                    <a href="javascript:void(0)" class="link-to">
+                                        <span class="icon-qty-combine">
+                                            <i class="icofont-cart-alt biolife-icon"></i>
+                                            <span class="qty"><span class="httcartitem">0</span></span>
+                                        </span>
+                                        <span class="title">My Cart</span>
+                                        <span class="sub-total d-none">- ₹ <span class="ttlcartamt">0.00</span></span>
+                                    </a>
+                                    <div class="cart-content">
+                                        <div class="cart-inner">
+                                            <ul class="products usercartItems">
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#">
+                                                                <img src="./web_theme/img/loveshare/product/love_prod_1@2x.jpg" width="80" height="80" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title">
+                                                                <a href="#" class="product-name">Flower</a>
+                                                            </div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">₹</span>130.00</span></ins>
+                                                                <del><span class="price-amount"><span class="currencySymbol">₹</span>130.00</span></del>
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[4][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[4][qty]" id="" value="1" disabled="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="javascript:void(0)">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p class="btn-control cartbtns">
+                                                <a href="#" class="btn view-cart">view cart</a>
+                                                <a href="#" class="btn">checkout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-toggle">
+                                <a class="btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="header-bottom d-none d-sm-none d-md-none d-lg-block d-xl-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="vertical-menu vertical-category-block">
+                            <div class="block-title">
+                                <span class="menu-icon">
+                                    <span class="line-1"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-3"></span>
+                                </span>
+                                <span class="menu-title">Browse Categories</span>
+                                <span class="angle" data-tgleclass="fa fa-caret-down"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            </div>
+
+                            <div class="wrap-menu">
+                                <ul class="menu clone-main-menu categorymenu">
+
+                                    <li class="menu-item">
+                                        <a href="#" class="menu-name" data-title="Flower">
+                                            <img src="./web_theme/img/loveshare/category/flowers.png" alt="" />
+                                            Flower
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="menu-name" data-title="Card">
+                                            <img src="./web_theme/img/loveshare/category/invitation.png" alt="" />
+                                            Greeting card
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 padding-top-2px">
+                        <nav class="navbar lv-navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="icofont-navigation-menu"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Flower <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Personalised Gifts</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Combos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Occasions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Catalogue</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Deals</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </header>
+
+    <div class="livekichen-section" style="background-image: url(./web_theme/img/breadcrumb/livekichenbg@2x.jpg);">
+        <div class="top-title">
+            <h1>Live Kitchen</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="biolife-nav">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="permal-link"><i class="icofont-ui-home"></i> Home</a></li>
+                <li class="nav-item"><span class="current-page">Live Kitchen</span></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Page Contain -->
+    <div class="page-liveKitchen">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-daily-meals-tab" data-toggle="tab" href="#nav-daily-meals"
+                                role="tab" aria-controls="nav-daily-meals" aria-selected="true">Daily Meals</a>
+                            <a class="nav-item nav-link" id="nav-indian-recipes-tab" data-toggle="tab" href="#nav-indian-recipes"
+                                role="tab" aria-controls="nav-indian-recipes" aria-selected="false">Indian Recipes</a>
+                            <a class="nav-item nav-link" id="nav-international-recipes-tab" data-toggle="tab" href="#nav-international-recipes"
+                                role="tab" aria-controls="nav-international-recipes" aria-selected="false">international Recipes</a>
+                            <a class="nav-item nav-link" id="nav-cooking-videos-tab" data-toggle="tab" href="#nav-cooking-videos"
+                                role="tab" aria-controls="nav-cooking-videos" aria-selected="false">Cooking Videos</a>
+                            <a class="nav-item nav-link" id="cart-item-tab" data-toggle="tab" href="#cart-item"
+                                role="tab" aria-controls="cart-item" aria-selected="false"><i class="icofont-food-cart"></i></a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-daily-meals" role="tabpanel" aria-labelledby="nav-daily-meals-tab">
+                            <div class="row">
+                                <div class="col-md-3">                                    
+                                    <ul class="list-view">
+                                        <li><a href='#'>Ready Meals</a></li>
+                                        <li><a href='#'>Hight Protein Meals</a></li>
+                                        <li><a href='#'>Gourmet</a></li>
+                                        <li><a href='#'>Curries Only</a></li>
+                                        <li><a href='#'>Combos</a></li>
+                                        <li><a href='#'>Snacks</a></li>
+                                        <li><a href='#'>Drinks</a></li>
+                                        <li><a href='#'>Deserts</a></li>
+                                        <li><a href='#'>Shakes</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                                            <div class="kitchen-item">
+                                                <a href="liveKitchen_detaiil.html"><img src="./web_theme/img/livekitchen/food1@2x.jpg" alt="img-3"></a>
+                                                <a href="#" class="kitchen-item__cart">Add to Cart</a>
+                                            </div>
+                                            <div class="kitchen-info">
+                                                <h4><img src="./web_theme/img/livekitchen/veg.png" alt=""> <span>Veg Meal</span></h4>
+                                                <h4>₹ 80</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                                            <div class="kitchen-item">
+                                                <img src="./web_theme/img/livekitchen/food2@2x.jpg" alt="img-3">
+                                                <a href="#" class="kitchen-item__cart">Add to Cart</a>
+                                            </div>
+                                            <div class="kitchen-info">
+                                                <h4><img src="./web_theme/img/livekitchen/nonveg.png" alt=""> <span>Non-Veg Meal</span></h4>
+                                                <h4>₹ 180</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                                            <div class="kitchen-item">
+                                                <img src="./web_theme/img/livekitchen/food3@2x.jpg" alt="img-3">
+                                                <a href="#" class="kitchen-item__cart">Add to Cart</a>
+                                            </div>
+                                            <div class="kitchen-info">
+                                                <h4><img src="./web_theme/img/livekitchen/veg.png" alt=""> <span>Dal Makhni &amp; Paratha</span></h4>
+                                                <h4>₹ 120</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+                                            <div class="kitchen-item">
+                                                <img src="./web_theme/img/livekitchen/food4@2x.jpg" alt="img-3">
+                                                <a href="#" class="kitchen-item__cart">Add to Cart</a>
+                                            </div>
+                                            <div class="kitchen-info">
+                                                <h4><img src="./web_theme/img/livekitchen/veg.png" alt=""> <span>Paneer &amp; Paratha</span></h4>
+                                                <h4>₹ 90</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-indian-recipes" role="tabpanel" aria-labelledby="nav-indian-recipes-tab">
+                            <div class="row">
+                                <div class="col-md-3">                                    
+                                    <ul class="list-view">
+                                        <li><a href='#'>Gujarati</a></li>
+                                        <li><a href='#'>Punjabi</a></li>
+                                        <li><a href='#'>Mumbai</a></li>
+                                        <li><a href='#'>Rajhasthani</a></li>
+                                        <li><a href='#'>Tamil Nadu</a></li>
+                                        <li><a href='#'>Hyderabadi</a></li>
+                                        <li><a href='#'>Karnataka</a></li>
+                                        <li><a href='#'>Chutneys</a></li>
+                                        <li><a href='#'>Pickles </a></li>
+                                        <li><a href='#'>Upmas &amp; Pohas</a></li>
+                                        <li><a href='#'>Idlis &amp; Dosas</a></li>
+                                        <li><a href='#'>Rice Delicacies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                            <div class="pro-cat">
+                                                <img src="./web_theme/img/livekitchen/recipe1@2x.jpg" alt="img-2">
+                                                <a href="#" class="container" data-toggle="modal" data-target="#recipesDetail">
+                                                    <h5>Zafrani Pulao</h5>
+                                                    <p class="text-thumbnails">Basmati Rice, Saffron (kesar),
+                                                        Cashewnuts, Raisins, Green
+                                                        Cardamom Powder, Almon...</p>
+                                                    <div class="tiny-text">10 ingredients</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="recipesDetail" tabindex="-1" role="dialog"
+                                aria-labelledby="recipesDetailLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true"><i class="icofont-close"></i></span>
+                                            </button>
+                                            <div class="kitchen-ingredients">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="./web_theme/img/livekitchen/recipe_img@2x.jpg" class="img-fluid" alt="" />
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="kitchen__head">
+                                                            <h5>Zafrani Pulao</h5>
+                                                            <p>by Asha Irani</p>
+                                                        </div>
+                                                        <div class="kitchen__head--sec">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <h5>2</h5>
+                                                                    <p>serving</p>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <h5>10</h5>
+                                                                    <p>ingredients</p>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <h5>30 <sup>min</sup></h5>
+                                                                    <p>to prepare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <h6 class="kitchen__head--sec--ft">Zafrani pulao is a
+                                                                    special sweet rice, with a combination of rich dry
+                                                                    fruits and saffron.
+                                                                    It's prepared on special occasions.</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- INGREDIENTS section -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="ing-sec">
+                                                            <h4>INGREDIENTS</h4>
+                                                            <hr class="mx-2">
+                                                            <div class="ing-item">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_1@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>2 Cup Basmati Rice</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_2@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>Cashewnuts (as per choice)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_3@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>Almonds (as per choice)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_4@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>0.5 teaspoon Green Cardamom Powder</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_5@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>0.25 Cup Milk</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_6@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>a pinch of Saffron (kesar)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_7@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>4 tablespoon Ghee</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_8@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>0.25 teaspoon Nutmeg Powder</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_9@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>0.5 cup Sugar</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="ing-item__detail">
+                                                                            <img src="./web_theme/img/livekitchen/ingradients/ingredient_10@2x.jpg"
+                                                                                alt="Ingredient">
+                                                                            <span>Raisins (as per choice)</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="mid-btn">
+                                                                    <a href="#" class="btn btn-animate">Buy all Ingredients</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cooking">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="steps">
+                                                                <h4>COOKING STEPS</h4>
+                                                                <hr>
+                                                                <div class="steps__dec">
+                                                                    <h6>Step 1 :</h6>
+                                                                    <p>Wash rice twice and soak in just enough water to
+                                                                        cover it for half an hour. Drain. Heat ghee in a
+                                                                        deep pan and gently fry almonds, cashew-nuts and
+                                                                        raisins.</p>
+                                                                </div>
+                                                                <div class="steps__dec">
+                                                                    <h6>Step 2 :</h6>
+                                                                    <p>Wash rice twice and soak in just enough water to
+                                                                        cover it for half an hour. Drain. Heat ghee in a
+                                                                        deep pan and gently fry almonds, cashew-nuts and
+                                                                        raisins.</p>
+                                                                </div>
+                                                                <div class="steps__dec">
+                                                                    <h6>Step 3 :</h6>
+                                                                    <p>In the same pan add rice and sauté gently for two
+                                                                        to three minutes. Add nutmeg powder and green
+                                                                        cardamom powder. Boil milk and sugar adding
+                                                                        saffron.</p>
+                                                                </div>
+                                                                <div class="steps__dec">
+                                                                    <h6>Step 4 :</h6>
+                                                                    <p>Add to rice with three and a half cups of hot
+                                                                        water. Add raisins. Stir once. Cover and cook on
+                                                                        low heat till done. Allow standing time of five
+                                                                        minutes.</p>
+                                                                </div>
+                                                                <div class="steps__dec">
+                                                                    <h6>Step 5 : (Garnishing)</h6>
+                                                                    <p>Garnish with almonds and cashew-nuts. Serve hot.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--main section kicthen-->
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-secondary my-0" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-international-recipes" role="tabpanel" aria-labelledby="nav-international-recipes-tab">
+                            <div class="row">
+                                <div class="col-md-3">                                    
+                                    <ul class="list-view">
+                                        <li><a href='#'>SPanish</a></li>
+                                        <li><a href='#'>Italian</a></li>
+                                        <li><a href='#'>American</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                            <div class="pro-cat">
+                                                <img src="./web_theme/img/livekitchen/recipe1@2x.jpg" alt="img-2">
+                                                <a href="#" class="container">
+                                                    <h5>Dish Name</h5>
+                                                    <p class="text-thumbnails">Basmati Rice, Saffron (kesar),
+                                                        Cashewnuts, Raisins, Green
+                                                        Cardamom Powder, Almon...</p>
+                                                    <div class="tiny-text">10 ingredients</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-cooking-videos" role="tabpanel" aria-labelledby="nav-cooking-videos-tab">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="recipes-videos">
+                                        <a href="#" class="dist">
+                                            <img src="./web_theme/img/livekitchen/videoImg.jpg" alt="img1">
+                                            <div class="dist-name">Video Name Here</div>
+                                        </a>
+                                        <div class="details-sec">
+                                            <p class="text-thumbnails">
+                                                18:15
+                                            </p>
+                                            <a href="" class="tiny-text">
+                                                Watch Now!
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="recipes-videos">
+                                        <a href="#" class="dist">
+                                            <img src="./web_theme/img/livekitchen/videoImg.jpg" alt="img1">
+                                            <div class="dist-name">Video Name Here</div>
+                                        </a>
+                                        <div class="details-sec">
+                                            <p class="text-thumbnails">
+                                                31:08
+                                            </p>
+                                            <a href="" class="tiny-text">
+                                                Watch Now!
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="recipes-videos">
+                                        <a href="#" class="dist">
+                                            <img src="./web_theme/img/livekitchen/videoImg.jpg" alt="img1">
+                                            <div class="dist-name">Video Name Here</div>
+                                        </a>
+                                        <div class="details-sec">
+                                            <p class="text-thumbnails">
+                                                08:35
+                                            </p>
+                                            <a href="" class="tiny-text">
+                                                Watch Now!
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cart-item" role="tabpanel" aria-labelledby="cart-item-tab">
+                            <div class="shopping-cart-container">
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                                        <h3 class="box-title">Your cart items</h3>
+                                        <form class="shopping-cart-form" action="#" method="post">
+                                            <table class="shop_table cart-form">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="product-name">Product Name</th>
+                                                        <th class="product-price">Price</th>
+                                                        <th class="product-quantity">Quantity</th>
+                                                        <th class="product-subtotal">Total</th>
+                                                        <th class=""></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="cart_item cart_238">
+                                                        <td class="product-thumbnail" data-title="Item Name">
+                                                            <a class="prd-thumb" href="#">
+                                                                <figure><img width="113" height="113" class="thumb-lg"
+                                                                        src="./web_theme/img/livekitchen/food1@2x.jpg"
+                                                                        alt="shipping cart"></figure>
+                                                            </a>
+                                                            <a class="prd-name" href="#">Item Name</a>
+                                                        </td>
+                                                        <td class="product-price" data-title="Price">
+                                                            <div class="price price-contain">
+                                                                <ins><span class="price-amount"><span
+                                                                            class="currencySymbol">₹</span>130.00</span></ins>
+                                                                <!-- <del><span class="price-amount"><span
+                                                                            class="currencySymbol">₹</span>130.00</span></del> -->
+                                                            </div>
+                                                            <label class="message label label-info">Rewards: 1</label>
+                                                        </td>
+                                                        <td class="product-quantity" data-title="Quantity" id="f_4">
+                                                            <div class="quantity-box type1">
+                                                                <div class="qty-input">
+                                                                    <input type="text" name="qty" class="qty qtybox"
+                                                                        value="3" data-max_value="20" data-min_value="1"
+                                                                        data-step="1">
+                                                                    <a href="#" class="qty-btn btn-up"
+                                                                        onclick="add_to_cart(4, 'f_4', 'qtybtn', '+')"><i
+                                                                            class="fa fa-caret-up"
+                                                                            aria-hidden="true"></i></a>
+                                                                    <a href="#" class="qty-btn btn-down"
+                                                                        onclick="add_to_cart(4, 'f_4', 'qtybtn', '-')"><i
+                                                                            class="fa fa-caret-down"
+                                                                            aria-hidden="true"></i></a>
+
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="product-subtotal" data-title="Total">
+                                                            <div class="price price-contain">
+                                                                <ins><span class="price-amount"><span
+                                                                            class="currencySymbol">₹</span><span
+                                                                            class="price_4">390</span></span></ins>
+                                                                <del><span class="price-amount"><span
+                                                                            class="currencySymbol">₹</span><span
+                                                                            class="mrp_4">390</span></span></del>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="action">
+
+                                                                <a href="javascript:void(0)" class="text-danger remove"
+                                                                    onclick="remove_cart_item(238, 4, 'viewcart')">
+                                                                    <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="cart_item wrap-buttons">
+                                                        <td class="wrap-btn-control" colspan="4">
+                                                            <a href="liveKitchen.html" class="btn back-to-shop">Back to
+                                                                Shop</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="shpcart-subtotal-block">
+                                            <div class="subtotal-line">
+                                                <b class="stt-name">Subtotal <span class="sub">(1 items)</span></b>
+                                                <span class="stt-price">₹390.00</span>
+                                            </div>
+                                            <div class="subtotal-line">
+                                                <b class="stt-name">Delevery Charge</b>
+                                                <span class="stt-price">₹0.00</span>
+                                            </div>
+                                            <!--<div class="tax-fee">
+                                                <p class="title">Est. Taxes & Fees</p>
+                                                <p class="desc">Based on 56789</p>
+                                            </div>-->
+                                            <div class="btn-checkout">
+                                                <a href="#" class="btn checkout">Check out</a>
+                                            </div>
+                                            <div class="biolife-progress-bar">
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td class="first-position">
+                                                            <span class="index">₹0</span>
+                                                        </td>
+                                                        <td class="mid-position">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="last-position">
+                                                            <span class="index">₹390.00</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="separator sm-margin-top-100px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer layout-03">
+        <div class="footer-content background-footer-03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-9">
+                        <section class="footer-item">
+                            <a href="index.html" class="logo footer-logo"><img
+                                    src="./uploads/logo/andamanmarketlogo.png" alt="Logo" width="200" height="auto"></a>
+                            <div class="footer-phone-info">
+                                <i class="biolife-icon icon-head-phone"></i>
+                                <a href="tel:+919632692619" class="r-info">
+                                    <span>Got Questions ?</span>
+                                    <span>+91 9632692619</span>
+                                </a>
+                            </div>
+                            <div class="newsletter-block layout-01">
+                                <h4 class="title">Newsletter Signup</h4>
+                                <div class="form-content">
+                                    <form action="#" name="new-letter-foter">
+                                        <input type="email" class="input-text email" value=""
+                                            placeholder="Your email here...">
+                                        <button type="submit" class="bnt-submit" name="ok">Sign up</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                            <h3 class="section-title">Useful Links</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-xs-6">
+                                    <div class="wrap-custom-menu vertical-menu-2">
+                                        <ul class="menu">
+                                            <li><a href="./home/about_us">About Us</a></li>
+                                            <li><a href="./home/terms_conditions">Terms & Conditions</a></li>
+                                            <li><a href="./home/privay_policy">Privacy Policy</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-6">
+                                    <div class="wrap-custom-menu vertical-menu-2">
+                                        <ul class="menu">
+                                            <li><a href="./home/about_us">Who We Are</a></li>
+                                            <li><a href="#">Our Services</a></li>
+                                            <li><a href="./home/contact_us">Contacts Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12 newsletter-block layout-01">
+                                    <h4 class="title mb-3">Download from</h4>
+                                    <div class="d-flex">
+                                        <div class="appStore-footer mr-2">
+                                            <div class="icon">
+                                                <a href="#">
+                                                    <img src="web_theme/img/android.svg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="appStore-footer ml-2">
+                                            <div class="icon">
+                                                <a href="#">
+                                                    <img src="web_theme/img/apple.svg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                            <h3 class="section-title">Transport Offices</h3>
+                            <div class="contact-info-block footer-layout xs-padding-top-10px">
+                                <ul class="contact-lines">
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-location"></i>
+                                            <b class="desc">No:251, Port Blair, South Andaman - 744103 </b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-phone"></i>
+                                            <a href="tel:+919632692619"><b class="desc">Phone: +91 9632692619</b></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-letter"></i>
+                                            <b class="desc">Email: support@andamanmarket.shop</b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-clock"></i>
+                                            <b class="desc">Hours: 7 Days a week from 09:00 am</b>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="biolife-social inline">
+                                <h5 class="title">Follow Us</h5>
+                                <ul class="socials">
+                                    <li><a href="#" title="twitter" class="socail-btn"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Andmanmarketshop-100485584992560/?modal=admin_todo_tour"
+                                            title="facebook" class="socail-btn"><i class="fa fa-facebook"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/andamanmarket-shop/about/?viewAsMember=true"
+                                            title="linkedin" class="socail-btn"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" title="youtube" class="socail-btn"><i class="fa fa-youtube"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.instagram.com/andamanmarket.shop/?hl=en" title="instagram"
+                                            class="socail-btn"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="separator sm-margin-top-40px xs-margin-top-40px"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="copy-right-text">
+                            Copyright &copy; <script>
+                                document.write(new Date().getFullYear());
+                            </script> <a href="http://andamanmarket.shop/" target="_blank">Andamanmarket Shop.</a>
+                            | Powered by: <a href="https://www.annantasource.com/">Annanta Source, LLC.</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-6 col-12">
+                        <div class="payment-methods">
+                            <ul>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card1.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card2.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card3.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card4.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card5.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card6.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card7.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card8.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card9.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="./web_theme/img/payment/card10.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Footer For Mobile-->
+    <div class="mobile-footer">
+        <div class="mobile-footer-inner">
+            <div class="mobile-block block-menu-main">
+                <a class="menu-bar menu-toggle btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
+                    <span class="fa fa-bars"></span>
+                    <span class="text">Menu</span>
+                </a>
+            </div>
+            <div class="mobile-block block-sidebar">
+                <a class="menu-bar filter-toggle btn-toggle" data-object="open-mobile-filter" href="javascript:void(0)">
+                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                    <span class="text">Sidebar</span>
+                </a>
+            </div>
+            <div class="mobile-block block-minicart">
+                <a class="link-to-cart" href="#">
+                    <span class="fa fa-shopping-bag" aria-hidden="true"></span>
+                    <span class="text">Cart</span>
+                </a>
+            </div>
+            <div class="mobile-block block-global">
+                <a class="menu-bar myaccount-toggle btn-toggle" data-object="global-panel-opened"
+                    href="javascript:void(0)">
+                    <span class="fa fa-globe"></span>
+                    <span class="text">Global</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Mobile Global Menu-->
+    <div class="mobile-block-global">
+        <div class="biolife-mobile-panels">
+            <span class="biolife-current-panel-title">Global</span>
+            <a class="biolife-close-btn" data-object="global-panel-opened" href="#">&times;</a>
+        </div>
+        <div class="block-global-contain">
+            <div class="glb-item my-account">
+                <b class="title">My Account</b>
+                <ul class="list">
+                    <li class="list-item"><a href="#">Login/register</a></li>
+                    <li class="list-item"><a href="#">Wishlist <span class="index">(8)</span></a></li>
+                    <li class="list-item"><a href="#">Checkout</a></li>
+                </ul>
+            </div>
+            <div class="glb-item currency">
+                <b class="title">Currency</b>
+                <ul class="list">
+                    <li class="list-item"><a href="#">€ EUR (Euro)</a></li>
+                    <li class="list-item"><a href="#">$ USD (Dollar)</a></li>
+                    <li class="list-item"><a href="#">£ GBP (Pound)</a></li>
+                    <li class="list-item"><a href="#">¥ JPY (Yen)</a></li>
+                </ul>
+            </div>
+            <div class="glb-item languages">
+                <b class="title">Language</b>
+                <ul class="list inline">
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/us.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/fr.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/ger.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><img src="./web_theme/images/languages/jap.jpg" alt="flag" width="24" height="18" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo" id="demo"></div>
+    <!-- Scroll Top Button -->
+    <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
+
+    <!-- Social Media & Certified Logo -->
+    <ul class="kt-sticky-toolbar">
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-fb">
+                <i class="fa fa-facebook"></i>
+                <a href="#" target="_blank">
+                    Like us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-tw">
+                <i class="fa fa-twitter"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-tw">
+                <i class="fa fa-linkedin"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-yp">
+                <i class="fa fa-youtube-play"></i>
+                <a href="#"
+                    target="_blank">
+                    Watch Us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <div class="fl-fl float-ig">
+                <i class="fa fa-instagram"></i>
+                <a href="#" target="_blank">
+                    Follow us!</a>
+            </div>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#">
+                <i class="icofont-full-sunny mb-2"></i>
+                <b>35 °C</b>
+            </a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="logo_icon_1"><img src="web_theme/img/logo_secureTrust.png" alt=""></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="logo_icon_2"><img src="web_theme/img/logo_norton.png" alt=""></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--demo-toggle" title="">
+            <a href="#" class="">
+                <img src="web_theme/img/privacy.png" alt="" />
+                <span>Data Privacy &amp; Security</span>
+            </a>
+        </li>
+    </ul>
+
+
+    <script src="./web_theme/js/bootstrap.js"></script>
+    <script src="./web_theme/js/jquery.countdown.min.js"></script>
+    <script src="./web_theme/js/jquery.nice-select.min.js"></script>
+    <script src="./web_theme/js/jquery.nicescroll.min.js"></script>
+    <script src="./web_theme/js/slick.min.js"></script>
+    <script src="./web_theme/js/biolife.framework.js"></script>
+    <script src="./web_theme/js/functions.js"></script>
+    <script src="./web_theme/js/jquery.validate.min.js"></script>
+    <script src="./web_theme/plugins/sweetalert/sweetalert.js"></script>
+    <script src="./web_theme/js/userauth.js"></script>
+    <script src="./web_theme/js/custom_js.js"></script>
+    <script src="./web_theme/js/jquery.cookie.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4-NHBgBOt179DW_BBjabNsAprlKQx3-Q&libraries=places&callback=initialize"
+        async defer></script>
+</body>
+</html>

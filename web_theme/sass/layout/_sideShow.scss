@@ -1,0 +1,66 @@
+#form_valuation {
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 30%;
+    padding: .5em;
+    font-size: .9em;
+    width: 200px;
+    border-radius: 0 0 4px 0;
+    text-align: center;
+    z-index: 99;
+    @include transition($all);
+    background: $cgrey;
+    color: #fff;
+  
+    > div > span {
+      line-height: 1.2em;
+      display: block;
+    }
+  
+    #calification_panel {
+      a {
+        display: block;
+        cursor: pointer;
+        width: 48px;
+        margin: 0 6px;
+        float: left;
+        color: #fff;
+  
+        @include transition($all);
+  
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  
+    #open_panel {
+      position: absolute;
+      left: 200px;
+      width: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 0 3px 3px 0;
+      font-size: 1.2em;
+      cursor: pointer;
+      background-color: $cdark;
+      color: #fff;
+      top: 0;
+  
+      &:hover {
+        background-color: darken($cdark, 20);
+      }
+    }
+  
+    #no_thanks {
+      color: white;
+      margin-left: 10px;
+    }
+  
+    textarea {
+      color: #222;
+      padding: 5px;
+    }
+  }
+  

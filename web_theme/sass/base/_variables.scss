@@ -1,0 +1,43 @@
+// Colors;
+$corange: #E73917;
+$cyellow: #FF9000;
+$cdark: #262A29;
+$cgrey: #707070;
+$bg-light: #f7f7f7;
+
+// Border radius
+$border12: 12px;
+$border10: 10px;
+$border8: 8px;
+$border6: 6px;
+$border4: 4px;
+$border2: 2px;
+$border0: 0px;
+
+// Heart
+$bubble-d: 3rem;
+$bubble-r: .5 * $bubble-d;
+
+// Shadow
+$shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+$light-bs: 0px 5px 14px -10px rgba(28, 28, 28, 0.75);
+$dark-bs: 0px 10px 20px -12px rgb(28, 28, 28, 0.5);
+$img-bs: 0px 16px 26px -14px rgba(0, 0, 0, 0.59);
+$icon-bs: 0 2rem 1.5rem -1.5rem rgba(33,37,41,0.15),0 0 1.5rem 0.5rem rgba(33,37,41,0.05);
+$icon-bsh: 0 2.25rem 1.5rem -1.5rem rgba(33,37,41,0.4),0 0 1.5rem 0.5rem rgba(33,37,41,0.05);
+
+// Transition
+$bezier: cubic-bezier(.19,1,.22,1);
+
+// Background Gradient
+$brand-primary: linear-gradient(100deg, $corange, $cyellow);
+$brand-secondary: linear-gradient(100deg, $cyellow, $corange);
+
+// Msg Color
+$white: $bg-light;
+$gray: $cgrey;
+$dark: $cdark;
+$error: #f14f31;
+$orange: #e73918;
+$success: #88c785;
+$secondary: #64b161;

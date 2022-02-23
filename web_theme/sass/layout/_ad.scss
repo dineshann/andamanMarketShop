@@ -1,0 +1,43 @@
+.page-saving {
+    position: relative;
+    .savingad {
+        margin: 1.5em 0;
+        padding: 0;
+        -moz-column-gap: 1.5em;
+        -webkit-column-gap: 1.5em;
+        column-gap: 1.5em;
+        font-size: .85em;
+        column-count:3;
+        .ad { 
+            display: inline-block;
+            background: #fff;
+            padding: 1em;
+            margin: 0 0 1.5em;
+            width: 100%;
+            border-radius: $border10;
+            -webkit-transition:1s ease all;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-shadow: 2px 2px 4px 0 #ccc;
+            img {
+                width: 100%;
+                border-radius: $border10;
+                @include transition($all);
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    
+       
+    }
+    
+    @media (max-width: 500px) {
+        .savingad {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+}

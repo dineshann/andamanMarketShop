@@ -1,0 +1,732 @@
+.header-area {
+    &.lv-header {
+        .header-middle {
+            .biolife-logo {
+                // margin-top: 0.5rem;
+                display: block;
+                @include lg-down {
+                    display: block;
+                    margin-top: 0.5rem;
+                }
+            }
+            .biolife-cart-info {
+                .minicart-block {
+                    .cart-content {
+                        @include sm-down {
+                            right: 0;
+                        }
+                        .cart-inner {
+                            padding: 16px 10px 20px 10px;
+                            .location-box {
+                                .form-search {
+                                    .form-control {
+                                        width: 100%;
+                                        border: 1px solid #e6e6e6;
+                                        border-radius: 0;
+                                        padding: 6px 10px;
+                                        max-width: 100%;
+                                        height: 42px;
+                                        outline: none;
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        appearance: none;
+                                        border-radius: $border8;
+                                        &:hover {
+                                            border-color: $cdark;
+                                        }
+                                        &:focus {
+                                            outline: none;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .btn-control {
+                                .btn-link {
+                                    background: transparent;
+                                    width: 100%;
+                                    padding: 0.4rem;
+                                    text-decoration: none;
+                                    margin-top: 0.5rem;
+                                    display: block;
+                                    border-radius: $border4;
+                                }
+                            }
+                            .minicart-item {
+                                .action {
+                                    a {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .miniwishlist-contain {
+                    position: relative;
+                    padding-top: 0.5rem;
+                    a {
+                        .heading {
+                            display: block;
+                            width: 100%;
+                            height: 20px;
+                            font-size: 12px;
+                            margin-bottom: -13px;
+                            line-height: 0;
+                            color: #262a29;
+                            @include sm-down {
+                                display: none;
+                            }
+                            @include md-down {
+                                display: none;
+                            }
+                        }
+                        .title {
+                            font-size: 1rem;
+                            line-height: 16px;
+                            display: inline;
+                            color: #555555;
+                            font-weight: 600;
+                            margin-left: 6px;
+                            @include lg-down {
+                                display: none;
+                            }
+                            @include sm-down {
+                                display: none;
+                            }
+                            @include md-down {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .link-to, .link-whishlist{
+                    display: flex;
+                    align-items: center;
+                }
+                .icon-qty-combine {
+                    .biolife-icon {
+                        font-size: 2rem;
+                        color: $cdark;
+                    }
+                    .qty {
+                        top: -10px;
+                        right: -12px;
+                        border: 2px solid white;
+                        width: 24px;
+                        height: 24px;
+                        padding: 0px;
+                        line-height: 20px;
+                        text-align: center;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .header-search-bar{
+                &.layout-01 {
+                    float: right;
+                    display: block;
+                    margin-top: 0.5rem;
+                    .input-text {
+                        width: 300px;
+                        padding: 0.5rem;
+                        @include lg-down {
+                            display: none;
+                        }
+                    }
+                    .btn-submit {
+                        width: 44px;
+                        height: 40px;
+                        top: 2px;
+                        right: 2px;
+                        background-color: $cdark;
+                        color: white;
+                        &:hover {
+                            background-color: lighten($color: $cdark, $amount: 20);
+                        }
+                        @include lg-down {
+                            display: none;
+                        }
+                    }
+                }
+                @include sm-down {
+                    display: none;
+                }
+            }
+            // &.is-sticky {
+            //     .header-search-bar {
+            //         display: none !important;
+            //     }
+            // }
+        }
+        
+        .header-bottom {
+            background-color: $cyellow;
+            // margin-top: 1.5rem;
+            min-height: 60px;
+            .vertical-category-block {
+                .block-title {
+                    background-color: $cdark;
+                    border-radius: 0;
+                    min-height: 60px;
+                    padding-top: 1.2rem;
+                    .angle {
+                        top: 25px;
+                    }
+                }
+            }
+
+            .navbar{
+                padding: 0;
+                min-height: 60px;
+                margin-top: -2px;
+                &-brand {
+                    background-color: white;
+                    border-radius: 0 0 $border8 $border8;
+                    padding: 1rem;
+                    img {
+                        width: 200px;
+                    }
+                }
+                &-toggler {
+                    background-color: white;
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+                &-collapse {
+                    .navbar-nav {
+                        align-items: flex-end;
+                        .nav-item {
+                            .nav-link {
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                color: white;
+                                padding: 0.5rem 0.65rem;
+                                margin: 0 0.25rem;
+                                border-radius: $border4;
+                                // background-color: rgba($color: #ffffff, $alpha: 0.25);
+                                -moz-transition: 0.15s box-shadow ease, 0.15s transform ease;
+                                transition: 0.15s box-shadow ease, 0.15s transform ease;
+                                @include box-shadow($icon-bs);
+                                
+                                &:hover {
+                                    background-color: white;
+                                    color: $cyellow;
+                                    transform: translateY(-0.25rem);
+                                    @include box-shadow($icon-bsh);
+                                }
+                            }
+                        }
+                    }
+                    
+                    @include lg-down {
+                        background-color: white;
+                        .navbar-nav {
+                            align-items: flex-start;
+                            .nav-item {
+                                display: block;
+                                width: 100%;
+                                text-align: left;
+                                .nav-link {
+                                    color: $cdark;
+                                    display: block;
+                                    padding: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                @include lg-down {
+                    background-color: white;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
+
+.lv-banner {
+    .slick-arrow {
+        display: none !important;
+    }
+    .slick-dots {
+        bottom: 12px;
+    }
+    .card-padding {
+        .card-banner {
+            img {
+                border-radius: $border8;
+            }
+        }
+    }
+}
+
+.lv-filter {
+    .heading {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $cdark;
+        @include uppercase;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 1rem 0 2.4rem;
+        padding-left: 0;
+        li {
+            a {
+                display: block;
+                margin: 0.25rem 0;
+                padding: 0.65rem 0.5rem;
+                color: $cdark;
+                font-size: 1.1rem;
+                font-weight: 600;
+                @include transition($all);
+                border-bottom: 1px solid lighten($color: $cgrey, $amount: 40);
+                &:hover {
+                    color: $cyellow;
+                    background-color: lighten($color: $cdark, $amount: 80%);
+                }
+            }
+        }
+    }
+
+    &__price {
+        margin-bottom: 2.4rem;
+        h5 {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .range {
+            width: 100%;
+            margin: 1.25rem auto;
+        }
+
+        // Range
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+
+            background-color: #fff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+            background: none;
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -.5em;
+        }
+
+        .ui-slider-horizontal {
+            height: .4em;
+            border: 0;
+            background-color: $cdark;
+            border-radius: $border4;
+
+        }
+
+        .money {
+            font-weight: 100;
+            text-align: center;
+            display: inline-block;
+            background-color: $cyellow;
+            color: #fff;
+            padding: 0.2rem;
+            border-radius: $border4;
+            transition: all .3s;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: darken($cyellow, 5);
+            }
+        }
+
+        .ui-state-hover,
+        .ui-widget-content .ui-state-hover,
+        .ui-widget-header .ui-state-hover,
+        .ui-state-focus,
+        .ui-widget-content .ui-state-focus,
+        .ui-widget-header .ui-state-focus,
+        .ui-state-active {
+            border-color: $cyellow;
+            border-width: 3px;
+            height: 1.2em;
+            width: 1.2em;
+            
+
+            background-color: $cyellow;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $cyellow;
+
+            }
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+            border-color: #a3a3a3;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #a3a3a3;
+            outline: 0;
+            border-width: 3px;
+            height: 1em;
+            width: 1em;
+            display: inline-block;
+            position: relative;
+
+            &:hover,
+            &:focus,
+            &:active {
+                outline: 0;
+                background-color: $cyellow;
+                border-color: $cyellow;
+            }
+
+            &:hover {
+                background-color: darken($cyellow, 5);
+
+                &:active {
+                    background-color: $cyellow;
+                }
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 2rem;
+    }
+
+    &__tag {
+        margin-bottom: 2rem;
+        &--name {
+            display: inline-block;
+            margin-top: 1rem;
+            .badge {
+                font-size: 0.9rem;
+                margin: 0.4rem;
+                color: $cgrey;
+                padding: 0.5rem 0.85rem;
+                background-color: white;
+                border-radius: $border4;
+                border: 1px solid lighten($color: $cgrey, $amount: 30);
+                @include transition($all);
+                @include box-shadow($light-bs);
+                &:hover {
+                    background-color: $cyellow;
+                    color: white;
+                    border-color: transparent;
+                    @include box-shadow($dark-bs);
+                }
+            }
+        }
+    }
+}
+
+
+
+.lv-product {
+    h4.heading {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    .lv-pro {
+        position: relative;
+        box-shadow: 0 8px 10px -4px rgba(80, 80, 80, 0.2);
+        transition: 0.3s;
+        border-radius: $border12;
+        overflow: hidden;
+        border: 1px solid #dcdcdc;
+        margin: 0 0 1.2rem;
+    
+        &__img {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            img {
+                width: 100%;
+                -webkit-transform: scale(1.1) translate3d(10px,5px,0);
+                transform: scale(1.1) translate3d(10px,5px,0);
+                transition: transform 1s linear;
+                transition: transform 1s linear,-webkit-transform 1s linear;
+            }
+            .sl {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                left: 0;
+                z-index: 4;
+                padding: 0 1.15rem;
+                font-size: 0.9rem;
+                color: white;
+                @include display-flex;
+                justify-content: space-between;
+                align-items: center;
+                &__star {
+                    .hidden {
+                        display: none;
+                    }
+                }
+                &__like {
+                    position: relative;
+                    z-index: 10;
+                    bottom: -4px;
+                    .toggle-heart {
+                        position: absolute;
+                        left: -100vw;
+                    }
+
+                    .heart-label {
+                        color: white;
+                    }
+
+                    .toggle-heart:checked+label {
+                        color: $corange;
+                    }
+
+                    .heart-label {
+                        font-size: 1.5em;
+                        cursor: pointer;
+                    }
+
+                    .heart-label {
+                        align-self: center;
+                    }
+
+                    @keyframes heart {
+
+                        0%,
+                        17.5% {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .toggle-heart:checked+label {
+                        will-change: font-size;
+                        animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+                    }
+
+                    .heart-label {
+                        position: relative;
+
+                        &:before,
+                        &:after {
+                            position: absolute;
+                            z-index: -1;
+                            top: 50%;
+                            left: 50%;
+                            border-radius: 50%;
+                            content: '';
+                        }
+                    }
+
+                    .heart-label::before {
+                        margin: -$bubble-r;
+                        width: $bubble-d;
+                        height: $bubble-d;
+                        background: $cyellow;
+                    }
+
+                    .heart-label:before {
+                        box-sizing: border-box;
+                        border: solid $bubble-r #e2264d;
+                        transform: scale(0);
+                    }
+
+                    .toggle-heart:checked+label {
+
+                        &::before,
+                        &::after {
+                            animation: inherit;
+                            animation-timing-function: cubic-bezier(.21, .61, .35, 1);
+                        }
+
+                        &::before {
+                            will-change: transform, border-color, border-width;
+                            animation-name: bubble;
+                        }
+
+                        &::after {
+                            animation-name: particles;
+                        }
+                    }
+                }
+            }
+            &:before {
+                @include afterb(absolute,0,0,100%,90px);
+                z-index: 2;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0) 100%);
+            }
+        }
+          
+        .details-sec {
+            display: block;
+            padding: 0.8rem 1rem 0;
+            h5 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 0.4rem;
+                color: $cdark;
+            }
+            p {
+                min-height: 80px;
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        .pricing {
+            @include display-flex;
+            justify-content: space-between;
+            .price {
+                display: inline-grid;
+                margin-left: 20px;
+                ins {
+                    text-decoration: none;
+                    .price-amount {
+                        font-size: 1.1rem;
+                        color: $cyellow;
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                }
+                del {
+                    .price-amount {
+                        font-size: 0.9rem;
+                        color: lighten($color: $cgrey, $amount: 10);
+                        font-weight: 500;
+                        text-decoration: none;
+                    }
+                }
+            }
+            p {
+                &.price {
+                    color: $cyellow;
+                    margin-left: 0.9rem;
+                    margin-top: 0.5rem;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    @include display-flex;
+                }
+                a {
+                    font-size: 0.8rem;
+                    color: $cyellow;
+                    margin-left: 0.25rem;
+                }
+            }
+            .pick {
+                font-weight: 700;
+                letter-spacing: 0.02rem;
+                position: relative;
+                background-color: $cyellow;
+                color: white;
+                right: 0;
+                bottom: 0;
+                padding: 0.75rem;
+                border-radius: $border8 0 0 $border8;
+                box-shadow: 0 8px 10px -4px rgba(80, 80, 80, 0.2);
+                &:hover {
+                    background-color: darken($color: $cyellow, $amount: 6%);
+                }
+            }
+        }
+      
+        &:hover {
+            box-shadow: 0 32px 26px -26px rgba(80, 80, 80, 0.4);
+            .lv-pro__img {
+                img {
+                    -webkit-transform: scale(1.1) translate3d(0,0,0);
+                    transform: scale(1.1) translate3d(0,0,0);
+                }
+            }
+        }
+    }
+}
+
+// Donate
+.donate-top {
+    display: block;
+    padding: 14rem 0;
+    position: relative;
+    @include background-img-cover;
+    background-attachment: fixed;
+    text-align: center;
+    margin: 1.6rem 0;
+    &:before {
+        content: "";
+        background-color: black;
+        opacity: 0.4;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__head {
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+        @include uppercase;
+    }
+
+    &__dec {
+        color: $cyellow;
+        font-weight: 400;
+        font-size: 1.75rem;
+        margin-top: 2rem;
+    }
+}
+
+.donate-cont {
+    position: relative;
+    h2 {
+        font-size: 2.75rem;
+        color: $cdark;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        @include md-down {
+            font-size: 2rem;
+        }
+    }
+    p{
+        font-size: 1.1rem;
+        color: $cdark;
+    }
+}
+
+.donate-btm {
+    position: relative;
+    h2 {
+        font-size: 2.75rem;
+        color: $cdark;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+        color: $cyellow;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+}

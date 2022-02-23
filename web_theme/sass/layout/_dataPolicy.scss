@@ -1,0 +1,122 @@
+#overview, #about, #terms, #privacy  {
+    &:focus {
+        outline: none;
+    }
+}
+.page-data {
+    position: relative;
+    .overview {
+        scroll-margin-top: 100px;
+        &__heading {
+            h2 {
+                font-size: 2.25rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            h4 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+        &__dec {
+            p {
+                margin: 0 auto 1.2rem; 
+                color: $cdark;
+                font-weight: 400;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+    .about {
+        scroll-margin-top: 100px;
+        &__heading {
+            h4 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+        &__dec {
+            p {
+                margin: 0 auto 1.2rem; 
+                color: $cdark;
+                font-weight: 400;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+                a {
+                    font-weight: 600;
+                    &:hover{
+                        @include clone-text;
+                    }
+                }
+            }
+        }
+    }
+    .terms {
+        scroll-margin-top: 100px;
+        &__heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        &__dec {
+            p {
+                margin: 0 auto 1.2rem; 
+                color: $cdark;
+                font-weight: 400;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+                a {
+                    font-weight: 600;
+                    &:hover{
+                        @include clone-text;
+                    }
+                }
+            }
+        }
+    }
+    .privacy {
+        scroll-margin-top: 100px;
+        &__heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        &__dec {
+            p {
+                margin: 0 auto 1.2rem; 
+                color: $cdark;
+                font-weight: 400;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+                a {
+                    font-weight: 600;
+                    &:hover{
+                        @include clone-text;
+                    }
+                }
+            }
+            ul {
+                li {
+                    color: $cdark;
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                    line-height: 1.75rem;
+                    margin-bottom: 0.75rem;
+                    a {
+                        font-weight: 600;
+                        &:hover{
+                            @include clone-text;
+                        }
+                    }
+                    ol {
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        } 
+    }
+}
+

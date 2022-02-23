@@ -1,0 +1,133 @@
+// .sticky.is-sticky {
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     z-index: 1000;
+//     width: 100%;
+// }
+
+.page-community {
+    position: relative;
+    #clothesBags {
+        &:focus {
+            outline: none;
+        }
+    }
+    // Topic Heading
+    .com-heading {
+        display: block;
+        padding: 10rem 0;
+        position: relative;
+        @include background-img-cover;
+        background-attachment: fixed;
+        text-align: center;
+        margin: 3rem 0;
+        &:before {
+            content: "";
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__head {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            @include uppercase;
+        }
+
+        &__dec {
+            color: $cyellow;
+            font-weight: 400;
+            font-size: 1.75rem;
+            margin-top: 2rem;
+        }
+    }
+
+    // Content
+    .com-content {
+        .img-fluid {
+            @include box-shadow($icon-bs);
+            border-radius: $border12;
+        }
+        
+        // Bag section
+        .market-recycle {
+            padding: 0 2rem 0 1rem;
+            &__hedaing {
+                h5 {
+                    font-size: 2.5rem;
+                    color: $cdark;
+                    font-weight: 700;
+                    margin-top: 1rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                    color: $cgrey;
+                    margin: 1rem auto;
+                    line-height: 28px;
+                }
+                hr {
+                    border: 1.2px solid $cyellow;
+                }
+            }
+
+            &__yellow {
+                p {
+                    color: $cyellow;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    font-weight: 400;
+                    width: 86%;
+                    &.small {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .recycle {
+            &__img {
+                @include display-flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__btn {
+                background-color: white;
+                border-radius: 2rem;
+                border-color: $cyellow;
+                color: $cyellow;
+                font-weight: 600;
+                width: 50%;
+                margin: 4rem auto 1rem;
+                -moz-transition: 0.15s box-shadow ease, 0.15s transform ease;
+                    transition: 0.15s box-shadow ease, 0.15s transform ease;
+                @include box-shadow($icon-bs);
+                &:hover {
+                    background-color: #FF9000;
+                    color: white;
+                    transform: translateY(-0.25rem);
+                    @include box-shadow($icon-bsh);
+                }
+            }
+        }
+
+        &__dec {
+            margin: 2rem auto;
+            color: $cdark;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+}

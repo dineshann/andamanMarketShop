@@ -1,0 +1,125 @@
+// Time Slot
+.time-picker {
+    margin: 0 -5px;
+
+    &-header {
+        position: relative;
+    }
+
+    .date-slot {
+        list-style: none;
+        padding: 0;
+
+        &-wrapper {
+            width: 20%;
+            text-align: center;
+            float: left;
+        }
+
+        &-item {
+            margin: 0 20px 10px;
+            padding: 10px;
+            border: 1px solid transparent;
+
+            &.active {
+                border: 1px solid $cyellow;
+            }
+
+            &.no-free-slot>* {
+                color: #666;
+            }
+        }
+
+        &-day,
+        &-date {
+            display: block;
+        }
+
+        &-day {
+            font-size: 16px;
+            line-height: 24px;
+            color: #666;
+        }
+
+        &-date {
+            font-size: 24px;
+            line-height: 36px;
+            color: #000;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 15px;
+        height: 40px;
+        width: 40px;
+        background: lighten($color: $cgrey, $amount: 20%);
+        border-radius: 50%;
+        border: none;
+        -webkit-appearance: none;
+        @include transition(&all);
+
+        &.left {
+            left: -35px;
+
+            &:after {
+                content: '\f104';
+                left: -1px;
+            }
+        }
+
+        &.right {
+            right: -35px;
+
+            &:after {
+                content: '\f105';
+                right: -1px;
+            }
+        }
+
+        &:after {
+            font-family: fontawesome;
+            font-size: 20px;
+            position: relative;
+        }
+
+        // &.inactive {
+        //     opacity: 0.4;
+        // }
+        &:hover {
+            background-color: darken($color: $cgrey, $amount: 4%);
+        }
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .time-slot {
+        list-style: none;
+        padding: 0;
+        float: left;
+        display: inline-block;
+        width: 20%;
+
+        &-item {
+            font-size: 14px;
+            line-height: 22px;
+            color: #666;
+            border: 1px solid #ccc;
+            border-radius: $border8;
+            padding: 10px;
+            margin: 10px 4px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover,
+            &.picked {
+                background: $cyellow;
+                border-color: $cyellow;
+                color: #FFF;
+            }
+        }
+    }
+}

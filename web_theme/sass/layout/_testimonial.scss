@@ -1,0 +1,214 @@
+.tesimonial-sec {
+    background-image: url("../img/breadcrumb/testimonial_bg.png");
+    background-position: center 70%;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    .nav-tabs {
+        .nav-item.show .nav-link {
+            border: none;
+        }
+
+        .nav-link {
+
+            &.active,
+            &:focus,
+            &:hover {
+                border: none;
+            }
+        }
+
+        border: none;
+    }
+
+    .h2,
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $cdark;
+    }
+
+    .client-testimonial .drop-shadow {
+        -webkit-filter: drop-shadow(0px 15px 50px rgba(255, 144, 0, 0.65));
+        -moz-filter: drop-shadow(0px 15px 50px rgba(255, 144, 0, 0.65));
+        -o-filter: drop-shadow(0px 15px 50px rgba(255, 144, 0, 0.65));
+        filter: drop-shadow(0px 15px 50px rgba(255, 144, 0, 0.65));
+        // border-radius: 50%;
+        border-radius: 50px 10px 40px 20px;
+        border: 3px solid $cyellow;
+    }
+
+   
+
+    .client-testimonial {
+        .client-nav .nav-item {
+            position: absolute;
+            z-index: 5;
+            width: 10.5rem;
+
+            &:nth-child(1) {
+                top: 2.5rem;
+                right: 16%;
+                width: 7rem;
+            }
+
+            &:nth-child(2) {
+                bottom: 3rem;
+                right: 0;
+            }
+
+            &:nth-child(3) {
+                bottom: 9rem;
+                left: 4%;
+            }
+
+            &:nth-child(4) {
+                top: -2rem;
+                left: 0;
+                width: 7rem;
+            }
+
+            &:nth-child(5) {
+                top: -9rem;
+                right: 0;
+                width: 7rem;
+            }
+        }
+
+        .tab-content {
+            .fade {
+                -webkit-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+                transition: all 0.4s ease-in;
+            }
+
+            .client-thumb {
+                width: 10.5rem;
+            }
+
+            .client-desc {
+                -webkit-box-shadow: 0px 15px 50px 0px rgba(115, 115, 115, 0.25);
+                box-shadow: 0px 15px 50px 0px rgba(115, 115, 115, 0.25);
+                min-height: 20rem;
+                padding: 2rem;
+                border-radius: $border12;
+
+                h4 {
+                    margin-bottom: 0.5rem;
+                }
+
+                h6 {
+                    font-size: 1.2rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 1.5rem;
+                    color: $cgrey;
+                }
+                p{
+                    font-size: 1.1rem;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1281px) {
+        .client-testimonial .client-nav .nav-item:nth-child(2) {
+            right: -3rem;
+        }
+    }
+
+    @media (min-width: 1281px) {
+        .client-testimonial .client-nav .nav-item:nth-child(4) {
+            left: -8rem;
+        }
+    }
+
+    @media (min-width: 1281px) {
+        .client-testimonial .client-nav .nav-item:nth-child(5) {
+            right: -5.5rem;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .client-testimonial .client-nav .nav-item {
+            position: relative !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: inherit;
+            width: 7rem !important;
+        }
+    }
+
+    .section-ptb,
+    .section-pt,
+    .section-pb {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+
+        .section-ptb,
+        .section-pt,
+        .section-pb {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+
+        .section-ptb,
+        .section-pt,
+        .section-pb {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    hr.line {
+        margin: 0;
+        border-color: #1c223a;
+        border-width: 1px;
+        width: 4.5rem;
+
+        &.line-sm {
+            width: 8.6rem;
+        }
+
+        &.bw-2 {
+            border-width: 2px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .mb-80 {
+        margin-bottom: 8rem !important;
+    }
+
+    .mb-20 {
+        margin-bottom: 2rem !important;
+    }
+
+    .mb-25 {
+        margin-bottom: 2.5rem !important;
+    }
+
+}

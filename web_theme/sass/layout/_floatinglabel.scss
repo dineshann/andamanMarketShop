@@ -1,0 +1,203 @@
+%label-movement {
+  // Move up, colorize and shrink
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: $cdark;
+  top: 0px;
+  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+}
+
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+  width: auto;
+
+  input,
+  textarea,
+  select {
+    padding: 0.2rem 0.5rem 0.7rem 0.5rem;
+    border: 0;
+    width: 100%;
+    color: black;
+    background: transparent;
+    border: 1px outset #dfdfdf;
+    box-shadow: 0px 8px 20px -14px rgba(#282828, 0.2);
+    font-size: 1.3rem;
+    font-weight: 100;
+
+    ~span,
+    span.highlight {
+      // Border Effect
+      display: block;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(-103deg, $corange 0%, $cyellow 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: $border6;
+      transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+
+      &.error {
+        background: linear-gradient(-103deg, rgb(250, 0, 54) 0%, rgb(255, 0, 179) 100%);
+      }
+    }
+
+    &:focus {
+      // Trigger the effects
+      outline: 0;
+
+      ~label {
+        // Move Label
+        @extend %label-movement;
+      }
+
+      ~span {
+        // Expand across
+        width: 100%;
+        transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+      }
+    }
+
+    &:valid~label
+
+    /*, &.not-empty ~ label*/
+      {
+      // Keep label above field after its filled out
+      @extend %label-movement;
+    }
+  }
+
+  textarea {
+    // Mods needed for multiline inputs
+    width: 100%;
+    min-height: 4em;
+  }
+
+  .floating-input,
+  .floating-select {
+    font-size: 14px;
+    padding: 4px 4px;
+    margin-top: 0.8rem;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgba($cdark, 0);
+    border-radius: $border6;
+    border: 1px solid #a9a9a9;
+  }
+
+  .floating-input:focus,
+  .floating-select:focus {
+    outline: none;
+    border-bottom: 1px solid $cdark;
+  }
+
+  label {
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+    position: absolute;
+    pointer-events: none;
+    left: 6px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    font-weight: 100;
+    transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+  }
+
+  .floating-input {
+
+    &:focus~label,
+    &:not(:placeholder-shown)~label {
+      top: -20px;
+      font-size: 0.75rem;
+      color: $cdark;
+      background: white;
+    }
+  }
+
+  .floating-select {
+    .nice-select {
+      border: 1px solid #818589;
+      border-radius: $border6;
+
+      .list {
+        width: 100%;
+      }
+
+      .current {
+        color: $cdark;
+      }
+    }
+
+    &:focus~label,
+    &:not([value=""]):valid~label {
+      top: -15px;
+      font-size: 0.95rem;
+      color: $cdark;
+      background: white;
+    }
+  }
+
+
+
+  //active state
+  .floating-input:focus~.bar {
+
+    &:before,
+    &:after {
+      width: 50%;
+    }
+  }
+
+  .floating-select:focus~.bar {
+
+    &:before,
+    &:after {
+      width: 50%;
+    }
+  }
+
+  .floating-textarea {
+    min-height: 30px;
+    max-height: 260px;
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+}
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}

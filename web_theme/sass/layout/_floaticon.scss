@@ -1,0 +1,314 @@
+// FSSAI and App Store Icon
+.fssai {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    z-index: 9999;
+    border: 1px solid #a5a5a5;
+    @include box-shadow($img-bs);
+    animation: bounce 1s ease-in infinite;
+    img {
+        width: 260px;
+    }
+    h5 {
+        font-size: 1rem;
+        margin-top: 0.75rem;
+        font-weight: 700;
+    }
+
+    @include lg-down {
+        display: none;
+    }
+    @include xl-down {
+        display: none;
+    }
+}
+.appStore {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    .icon {
+        margin: 0.5rem auto;
+        a {
+            padding: 0.75rem 0.85rem;
+            border-radius: $border8;
+            background-color: black;
+            img {
+                width: 120px;
+            }
+        }
+    }
+
+    @include lg-down {
+        display: none;
+    }
+    @include xl-down {
+        display: none;
+    }
+}
+
+// Scroll to Top
+.btn-scroll-top {
+    bottom: 40px;
+}
+
+// Sales offer
+.salesOffer-action {
+    width: 70px;
+    position: fixed;
+    bottom: 12%;
+    right: 2.75%;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    z-index: 50;
+    background: white;
+    display: block;
+
+    &:hover {
+        @include box-shadow($dark-bs);
+    }
+
+    &::before,
+    &::after {
+        @extend %full-fill;
+        content: '';
+        z-index: -1;
+        // margin: -1 * $clip-distance * 100%;
+        box-shadow: inset 0 0 0 $path-width;
+        animation: clipMe $anime-time linear infinite;
+    }
+
+    &::before {
+        animation-delay: $anime-time * -.5;
+    }
+
+    @include lg-down {
+        display: none;
+    }
+
+    @include xl-down {
+        display: none;
+    }
+
+    a {
+        background-color: white;
+        @include display-flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        padding: 0.25rem;
+        margin: 0 auto;
+        @include transition($all);
+
+        &:hover {
+            -webkit-animation: scale-up-center .4s cubic-bezier(.39, .575, .565, 1) both;
+            animation: scale-up-center .4s cubic-bezier(.39, .575, .565, 1) both;
+        }
+    }
+}
+
+.salesOffer {
+    display: none;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    z-index: 100;
+    height: 100vh;
+    overflow: hidden;
+    padding: 2rem 1.5rem 2rem;
+    background-color: white;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+
+    .close-btn {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.8rem;
+        color: white;
+        padding: 0.5rem 0.8rem;
+        background-color: $corange;
+        text-align: center;
+        z-index: 2;
+        border-radius: $border4;
+    }
+
+    .right-column {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0px;
+        padding: 0.75rem;
+        background: #ececec;
+    }
+
+}
+
+// Certified Logo
+.kt-sticky-toolbar {
+    width: 50px;
+    position: fixed;
+    top: 6%;
+    right: 0;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    z-index: 50;
+    background: white;
+    -webkit-box-shadow: 0 0 50px 0 rgba(82, 63, 105, 0.15);
+    box-shadow: 0 0 50px 0 rgba(82, 63, 105, 0.15);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 3px 0 0 3px;
+    @include lg-down {
+        display: none;
+    }
+    @include xl-down {
+        display: none;
+    }
+
+    .kt-sticky-toolbar__item {
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        min-height: 38px;
+
+        &.kt-sticky-toolbar__item--demo-toggle>a {
+            padding: 8px 0;
+            width: 42px;
+            min-height: 100px;
+            max-height: 162px;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $cdark;
+            letter-spacing: 1px;
+        }
+
+        >a {
+            background: #f4f4f8;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 30px;
+            border-radius: 3px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            &:hover {
+                background-color: lighten($color: $cdark, $amount: 10);
+                color: white;
+            }
+            span {
+                font-size: 0.95rem;
+                line-height: 16px;
+                margin-top: 0.5rem;
+            }
+
+            &.logo_icon_1 {
+                img {
+                    transform: rotate(90deg);
+                    max-width: 80px;
+                }
+            }
+
+            &.logo_icon_2 {
+                height: 90px;
+
+                img {
+                    transform: rotate(90deg);
+                    max-width: 150px;
+                }
+            }
+        }
+        .fl-fl {
+            background: #f4f4f8;
+            color: $cdark;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 2px;
+            width: 190px;
+            height: 36px;
+            position: fixed;
+            right: -140px;
+            z-index: 1000;
+            // font: normal normal 10px Arial;
+            -webkit-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            -ms-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        
+            @include md-down {
+                display: none;
+            }
+        
+            .fa {
+                font-size: 16px;
+                color: $cdark;
+                padding: 8px 0;
+                width: 20%;
+                margin-left: 0;
+                -webkit-transition: all .25s ease;
+                -moz-transition: all .25s ease;
+                -ms-transition: all .25s ease;
+                -o-transition: all .25s ease;
+                transition: all .25s ease;
+            }
+        
+            a {
+                color: $cdark;
+                text-decoration: none;
+                text-align: center;
+                line-height: 36px;
+                vertical-align: top;
+                display: inline-block;
+                width: 70%;
+                -webkit-transition: all .25s ease;
+                -moz-transition: all .25s ease;
+                -ms-transition: all .25s ease;
+                -o-transition: all .25s ease;
+                transition: all .25s ease;
+            }
+        
+            &:hover {
+                background-color: $cdark;
+                right: 0;
+                line-height: 36px;
+                .fa, a {
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+product_name,product_description,product_image_name,category_id,in_stock (0 or 1),price,unit_value,unit,increament,rewards
+TestName1,TestAddress1,img1.jpg,1,1,50,1,kg,1,19
+tomato,TestAddress2,tomato.jpg,2,1,50,1,kg,1,24
+kisan tomato ketchup,TestAddress3,tomato_ketchup.png,3,1,50,1,kg,1,20
+Butter,TestAddress4,Bread_Butter.jpeg,4,1,50,1,kg,1,22
+reusable_bags,TestAddress1,reusable_bags.png,5,1,50,1,kg,1,9
+TestName,TestAddress2,img6,6,1,50,1,kg,1,14
+TestName3,TestAddress3,img7,7,1,50,1,kg,1,20
+TestName4,TestAddress4,img8,8,1,50,1,kg,1,20

@@ -1,0 +1,168 @@
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+$all: all .3s ease-in-out;
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+// Box-shadow 
+@mixin box-shadow($shadowvalue) {
+  -webkit-webkit-box-shadow: $shadowvalue;
+  -moz-webkit-box-shadow: $shadowvalue;
+  -ms-webkit-box-shadow: $shadowvalue;
+  -o-webkit-box-shadow: $shadowvalue;
+  box-shadow: $shadowvalue;
+}
+
+// mixin for content top
+@mixin post($absolute,$left,$top,$width,$height) {
+  position: $absolute;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: $height;
+}
+// mixin for content top
+@mixin aftert($absolute,$left,$top,$width,$height) {
+  position: $absolute;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: $height;
+  content: ""; 
+}
+// mixin for content Bottom
+@mixin afterb($absolute,$left,$bottom,$width,$height) {
+  position: $absolute;
+  left: $left;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+  content: ""; 
+}
+// mixin for content Clock
+@mixin afterc($absolute,$top,$right,$bottom,$left,$width,$height) {
+  position: $absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+  content: ""; 
+}
+
+// Uppercase
+@mixin uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+// Background Image Cover
+@mixin background-img-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// Display 
+@mixin display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+@mixin flex($flex...) {
+  -webkit-box-flex: $flex;
+  -webkit-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+}
+
+@mixin order($order...) {
+  -webkit-order: $order;
+  -ms-flex-order: $order;
+  order: $order;
+}
+
+// Clone Text
+@mixin clone-text {
+  background: linear-gradient(90deg, $cyellow, $corange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none;
+}
+
+// Wishlist
+@mixin bubble($ext) {
+  border-color: #cc8ef5;
+  border-width: $ext;
+  transform: scale(1);
+}
+
+// Media Query
+@mixin xl-down {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin lg-down {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin md-down {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm-down {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin sm-up {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+

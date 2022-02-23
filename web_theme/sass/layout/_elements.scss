@@ -1,0 +1,509 @@
+// HTML
+html {
+    a {
+        &:focus,
+        &:active {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.btn-fav {
+    color: $cdark;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    @include transition($all);
+    &:hover {
+        color: darken($color: $cyellow, $amount: 10);
+    }
+}
+
+.btn-animate {
+    color: $cyellow;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+    border: 1px solid $cyellow;
+    border-radius: $border12;
+    box-shadow: 0px 16px 32px -20px #1c1c1c;
+    background: none;
+    transition: all .2s $bezier;
+    overflow: hidden;
+    outline: none;
+    transform: translateZ(0);
+    padding: 0.8rem 2.2rem;
+
+    &.nbs {
+        display: flex;
+        align-items: center;
+        @include box-shadow ($light-bs);
+        padding: 0.5rem 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    img {
+        filter: brightness(0.25);
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    .bg-title {
+        font-size: 1.2rem;
+        color: $cdark;
+    }
+
+    &:before,
+    &:after {
+        border-radius: $border12;
+        content: '';
+        z-index: -1;
+        background: white;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &:after {
+        background: $brand-secondary;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .5s $bezier;
+        transition-delay: .1s;
+    }
+
+    &.btn-sm {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+        border-radius: $border6;
+        &:before,
+        &:after {
+            border-radius: $border6;
+
+        }
+        &:hover {    
+            &:after {
+                border-radius: $border6;
+            }
+        }
+    }
+
+    &.btn-md {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        border-radius: $border8;
+        &:before,
+        &:after {
+            border-radius: $border8;
+
+        }
+        &:hover {    
+            &:after {
+                border-radius: $border8;
+            }
+        }
+    }
+
+    &:hover {
+        color: $bg-light;
+        box-shadow: 0px 16px 47px -15px rgb(28, 28, 28);
+        img {
+            filter: brightness(1);
+        }
+        .bg-title {
+            font-size: 1.2rem;
+            color: white;
+        }
+        &:after {
+            border-radius: $border12;
+            transform: scaleY(1);
+            transform-origin: bottom;
+            transition-delay: 0s;
+        }
+    }
+
+    &:focus {
+        border-color: transparent;
+        outline: none;
+    }
+
+    &:active {
+        border-color: transparent;
+        outline: none;
+        transform: translateY(4px) translateZ(0);
+        box-shadow: 0px 8px 20px -8px rgb(28, 28, 28);
+    }
+}
+
+// Modal 
+.modal {
+    .modal-header {
+        justify-content: center;
+
+        .modal-title {
+            margin-top: 0px;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        .close {
+            color: $cdark;
+            top: 6px;
+            font-size: 1.9rem;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background-color: lighten($color: black, $amount: 80%);
+        }
+
+        .close {
+            color: $cdark;
+            top: 6px;
+            font-size: 1.9rem;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
+    }
+}
+
+.thumb {
+    &-sm {
+        height: 32px;
+        width: 32px;
+    }
+    &-md {
+        height: 48px;
+        width: 48px;
+    }
+    &-lg {
+        height: 88px;
+        width: 88px;
+    }
+}
+
+// Heading
+.entry-header {
+    margin-bottom: 1.2rem;
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .entry-title {
+        font-size: 2.4rem;
+        margin-bottom: 0;
+        color: $cdark;
+        text-shadow: 0px 2px 6px rgba(186, 25, 90, 0.24);
+        font-weight: 700;
+        &-sm {
+            font-size: 1.75rem;
+            color: $cdark;
+            font-weight: 700;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $cyellow;
+        @include uppercase;
+        span {
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            min-width: 48px;
+            padding: 4px 10px;
+            transition: opacity 300ms;
+            white-space: nowrap;
+            background-color: #faebd7;
+            border-radius: 4px;
+            @include transition($all);
+            box-shadow: 0 8px 10px -4px rgba(80, 80, 80, 0.2);
+            &:hover {
+                background-color: $cyellow;
+                color: #faebd7;
+            }
+        }
+    }
+}
+
+// error
+form {
+    .form-group{
+        .form-control {
+            &.has-error {
+                border: 1px solid $corange !important;
+                background-color:#ffff99 !important;
+            }
+        }
+    }
+}
+
+.form-control {
+    &.has-error {
+        border: 1px solid $corange !important;
+        background-color:#ffff99 !important;
+    }
+}
+
+// Space Between
+.space-btw-20px {
+    margin: 10px auto;
+    display: flex;
+}
+.space-btw-30px {
+    margin: 15px auto;
+    display: flex;
+}
+.space-btw-40px {
+    margin: 20px auto;
+    display: flex;
+}
+.space-btw-50px {
+    margin: 25px auto;
+    display: flex;
+}
+.space-btw-60px {
+    margin: 30px auto;
+    display: flex;
+}
+.space-btw-80px {
+    margin: 40px auto;
+    display: flex;
+}
+.space-btw-100px {
+    margin: 50px auto;
+    display: flex;
+}
+
+// Modal
+.book-app {
+    padding: 2rem 3rem 2rem 2rem;
+    &__dr {
+        position: relative;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+        }
+
+        h5 {
+            text-align: center;
+            line-height: 3rem;
+            font-weight: 600;
+            color: $cdark;
+            letter-spacing: 1px;
+        }
+
+        p {
+            text-align: center;
+            color: $cdark;
+            line-height: 0.6rem;
+        }
+
+        h6 {
+            text-align: center;
+            color: $cdark;
+            line-height: 3rem;
+
+            span {
+                color: #FF9000;
+            }
+        }
+
+        &--book {
+            @include display-flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            .cal {
+                img {
+                    width: 80px;
+                    border-radius: 50%;
+                    border: 2px solid $cyellow;
+                }
+            }
+            .plus {
+                color: $cdark;
+            }
+            .zoom {
+                img {
+                    width: 80px;
+                    border-radius: 50%;
+                    // border: 2px solid $cyellow;
+                }
+            }
+        }
+        form {
+            position: relative;
+            display: block;
+            margin-bottom: 1rem;
+            padding-bottom: 2rem;
+            .form-group {
+                label {
+                    color: $cdark;
+                    font-weight: 500;
+                    margin-bottom: 0.4rem;
+                }
+
+                .form-control {
+                    // border-top-style: hidden;
+                    // border-right-style: hidden;
+                    // border-left-style: hidden;
+                    // border-bottom-style: groove;
+                    padding: 0.2rem;
+                    height: calc(1.2em + 0.75rem + 2px);
+                    display: block;
+                    width: 100%;
+                    border-radius: 0px;
+                    &.nice-select {
+                        border: 1px solid #818589;
+                        border-radius: $border6;
+                        .list {
+                            width: 100%;
+                        }
+                    }
+                    .current {
+                        color: $cdark;
+                        padding: 0.2rem;
+                    }
+                    &:focus,
+                    &:active {
+                        outline: none;
+                        border-color: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #bookSlot, #bookYogaSlot {
+        display: none;
+    }
+
+    &__form {
+        position: relative;
+        border-left: 1px solid #cdcdcd;
+        padding-left: 2.5rem;
+        h5 {
+            text-align: center;
+            font-weight: 600;
+            color: $cdark;
+        }
+
+        form {
+            .form-group {
+                margin-bottom: 0.5rem;
+                label {
+                    color: $cdark;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    margin-bottom: 0.2rem;
+                }
+
+                textarea {
+                    &.form-control {
+                        min-height: 120px;
+                    }
+                }
+
+                .form-control {
+                    padding: 0.25rem 0.5rem;
+                    border: 1px solid #818589;
+                    height: calc(1.2em + 0.75rem + 2px);
+                    display: block;
+                    width: 100%;
+                    border-radius: $border4;
+                    &.nice-select {
+                        .list {
+                            width: 100%;
+                        }
+                    }
+                    .current {
+                        color: $cdark;
+                        padding: 0.2rem;
+                    }
+                    &:focus,
+                    &:active {
+                        outline: none;
+                        border-color: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .form-heading {
+                font-size: 1.2rem;
+                font-weight: 600;;
+                text-align: left;
+                color: $cyellow;
+                margin-top: 0.75rem;
+                margin-bottom: 0.5rem;
+                &:hover {
+                    color: darken($color: $cyellow, $amount: 20);
+                }
+            }
+
+            #bookslot {
+                margin-bottom: 3.2rem;
+            }
+
+            .med-btn {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        border-left: 1px solid #cdcdcd;
+        padding-left: 2.5rem;
+        h4 {
+            font-size: 1.25rem;
+            text-align: left;
+            font-weight: 600;
+            color: $cdark;
+        }
+        h5 {
+            font-size: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: $cdark;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0.5rem;
+        }
+    }
+}

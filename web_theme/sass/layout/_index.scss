@@ -1,0 +1,475 @@
+.header-area {
+    .header-top {
+        height: 42px;
+    }
+    .header-middle {
+        // position: relative;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        &.is-sticky {
+            .fssai {
+                top: 6rem;
+            }
+            .appStore {
+                top: 5rem;
+            }
+        }
+        .biolife-cart-info {
+            .minicart-block {
+                .cart-inner {
+                    padding: 16px 10px 20px 10px;
+                    .location-box {
+                        .form-search {
+                            .form-control {
+                                width: 100%;
+                                border: 1px solid #e6e6e6;
+                                border-radius: 0;
+                                padding: 6px 10px;
+                                max-width: 100%;
+                                height: 42px;
+                                outline: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                border-radius: $border8;
+                                &:hover {
+                                    border-color: $cdark;
+                                }
+                                &:focus {
+                                    outline: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    .btn-control {
+                        .btn-link {
+                            background: transparent;
+                            width: 100%;
+                            padding: 0.4rem;
+                            text-decoration: none;
+                            margin-top: 0.5rem;
+                            display: block;
+                            border-radius: $border4;
+                        }
+                    }
+                    .minicart-item {
+                        .action {
+                            a {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                    .minicart-item {
+                        .action {
+                            a {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .miniwishlist-contain {
+                position: relative;
+                padding-top: 0.5rem;
+                a {
+                    .heading {
+                        display: block;
+                        width: 100%;
+                        height: 20px;
+                        font-size: 12px;
+                        margin-bottom: -13px;
+                        line-height: 0;
+                        color: #262a29;
+                    }
+                    .title {
+                        font-size: 1rem;
+                        line-height: 16px;
+                        display: inline;
+                        color: #555555;
+                        font-weight: 600;
+                        margin-left: 6px;
+                        @include lg-down {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .link-to, .link-whishlist{
+                display: flex;
+                align-items: center;
+            }
+            .icon-qty-combine {
+                .biolife-icon {
+                    font-size: 2rem;
+                    color: $cdark;
+                }
+                .qty {
+                    top: -10px;
+                    right: -12px;
+                    border: 2px solid white;
+                    width: 24px;
+                    height: 24px;
+                    padding: 0px;
+                    line-height: 20px;
+                    text-align: center;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .header-search-bar{
+            &.layout-01 {
+                float: right;
+                display: block;
+                margin-top: 0.5rem;
+                .input-text {
+                    width: 350px;
+                    padding: 0.5rem;
+                    @include lg-down {
+                        display: none;
+                    }
+                }
+                .btn-submit {
+                    width: 44px;
+                    height: 40px;
+                    top: 2px;
+                    right: 2px;
+                    background-color: $cdark;
+                    color: white;
+                    &:hover {
+                        background-color: lighten($color: $cdark, $amount: 20);
+                    }
+                    @include lg-down {
+                        display: none;
+                    }
+                }
+            }
+            @include sm-down {
+                display: none;
+            }
+        }
+        .biolife-logo {
+            img {
+                width: 180px;
+            }
+        }
+    }
+    .header-bottom {
+        padding-bottom: 0px;
+        position: relative;
+        bottom: -1.65rem;
+        .header-search-bar {
+            position: relative;
+            top: -1rem;
+        }
+        .contatInfo {
+            position: relative;
+            .contact_info {
+                @include display-flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                position: relative;
+                top: -1.85rem;
+                &--pic {
+                    margin-right: 0.5rem;
+                    img {
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+                &--info {
+                    h6 {
+                        font-size: 0.95rem;
+                        font-weight: 700;
+                        color: $cdark;
+                        margin-bottom: 0.2rem;
+                    }
+                    &__link{
+                        a {
+                            @include uppercase;
+                            font-weight: 700;
+                            color: $cyellow;
+                            font-size: 0.95rem;
+                            &:hover {
+                                color: darken($color: $cyellow, $amount: 2%);
+                                text-shadow: 0px 2px 2px lighten($color: $cdark, $amount: 75%);
+                            }
+                            @include lg-down {
+                                font-size: 0.85rem;
+                            }
+                        }
+                        span {
+                            color: $cyellow;
+                        }
+                    } 
+                    &__whatsUp {
+                        color: #64B161;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        &:hover {
+                            color: darken($color: #64B161, $amount: 5%);
+                            text-shadow: 0px 2px 2px lighten($color: $cdark, $amount: 70%);
+                        }
+                    }
+                }
+            }
+            @include lg-down {
+                display: block;
+            }
+        }
+        .vertical-category-block .block-title {
+            background-color: $cyellow;
+        }
+    }
+}
+
+.main-content {
+    .main-slide {
+        position: relative;
+        .bg-content {
+            position: absolute;
+            top: 3.5rem;
+            left: 4rem;
+            @include display-flex;
+            justify-content: space-around;
+            align-items: center;
+            &__cont {
+                @include uppercase;
+                width: 48%;
+                min-width: 60%;
+                color: white;
+                text-align: center;
+                h1 {
+                    font-size: 2.75rem;
+                    font-weight: bold;
+                    border-bottom: 1px solid white;
+                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
+                }
+                h5  {
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+            }
+            &__action {
+                a {
+                    padding: 1rem 2.5rem;
+                    @include uppercase;
+                    background-color: $cyellow;
+                    color: white;
+                    @include transition($all);
+                    border-radius: $border10;
+                    @include box-shadow($shadow);
+                    &:hover {
+                        background-color: darken($color: $cyellow, $amount: 5%);
+                        @include box-shadow($dark-bs);
+                    }
+                }
+            }
+        }
+    }
+
+    .ams-services {
+        position: relative;
+        @include display-flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        @include md-down {
+            overflow-x: scroll;
+        }
+        @include lg-down {
+            overflow-x: scroll;
+        }
+        .counter-thumb {
+            padding: 0.65rem;
+            background-color: transparent;
+            border: 1px solid #eeeeee;
+            border-radius: $border6;
+            width: 100%;
+            margin: 0.25rem;
+            text-align: center;
+            @include display-flex;
+            -webkit-flex-flow: column;
+            flex-flow: column;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -moz-transition: 0.15s box-shadow ease, 0.15s transform ease;
+            transition: 0.15s box-shadow ease, 0.15s transform ease;
+            @include box-shadow($icon-bs);
+            @include transition($all);
+            @include md-down {
+                min-width: 110px;
+            }
+            @include lg-down {
+                min-width: 140px;
+            }
+            img {
+                width: 60px;
+                height: 60px;
+                margin-bottom: auto;
+            }
+            h6 {
+                font-size: 1rem;
+                line-height: 20px;
+                font-weight: 500;
+                color: #707070;
+                margin-top: 1rem;
+                min-height: 32px;
+                max-width: 80px;
+                span {
+                    display: block;
+                    color: $cyellow;
+                }
+            }
+            
+            &:hover {
+                background-color: lighten($color: $cyellow, $amount: 48%);
+                border-color: lighten($color: $cyellow, $amount: 5%);
+                transform: translateY(-0.25rem);
+                @include box-shadow($icon-bsh);
+                
+                img {
+                    -webkit-animation: scale-up-center .75s cubic-bezier(.39, .575, .565, 1) both;
+                    animation: scale-up-center .75s cubic-bezier(.39, .575, .565, 1) both;
+                }
+            }
+        }
+    }
+
+    .home-09__elm-03 {
+        .product-tab {
+            .biolife-tab {
+                .tab-head__sample-layout {
+                    margin-top: 1.45rem;
+                    .tabs {
+                        .tab-element {
+                            display: inline-flex;
+                            a {
+                                background: none;
+                                padding: 0 0.5rem;
+                                border-right: 2px solid #737373;
+                                display: inline;
+                                line-height: 14px;
+                                min-width: auto;
+                                &:hover {
+                                    background: none;
+                                    color: $cyellow;
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                    border-right: none;
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: #0EA03B;
+                                    // min-width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pr-name {
+        min-height: 40px;
+    }
+}
+
+// Weather and Live floating icon
+.floatIcon {
+    &__wearhter {
+        position: fixed;
+        top: 40%;
+        left: 0;
+        a {
+            padding: 0.75rem 0.85rem;
+            border-radius: 0 $border8 $border8 0;
+            display: block;
+            text-align: center;
+            min-width: 100px;
+            border: 2px solid $corange;
+            border-left-color: transparent;
+            background-color: white;
+            img {
+                width: 80px;
+            }
+            h5 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $cdark;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__live {
+        position: absolute;
+        top: 4.15rem;
+        right: 0;
+        a {
+            display: block;
+            img {
+                width: 130px;
+            }
+        }
+    }
+
+    @include lg-down {
+        display: none;
+    }
+    @include xl-down {
+        display: none;
+    }
+}
+
+// Footer
+.appStore-footer {
+    text-align: left;
+    .icon {
+        padding: 0;
+        min-width: auto;
+        margin: 0.5rem auto;
+        a {
+            padding: 0.5rem 0.75rem;
+            border-radius: $border6;
+            background-color: black;
+            img {
+                width: 110px;
+            }
+        }
+    }
+}
+
+.copy-right-text {
+    margin-top: 20px;
+    a {
+        color: $cyellow;
+        font-weight: 600;
+        @include transition ($all);
+        &:hover {
+            color: darken($color: $cyellow, $amount: 2%);
+            text-decoration: underline;
+        }
+    }
+}
+
+// Footer
+footer {
+    .biolife-social {
+        margin-top: 0;
+        h5 {
+            font-weight: 700;
+            margin-bottom: 1.19rem;
+        }
+    }
+    .newsletter-block {
+        &.layout-01 {
+            margin-top: 50px;
+        }
+    }
+}
