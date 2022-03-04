@@ -271,10 +271,12 @@
 
     .ams-services {
         position: relative;
-        @include display-flex;
-        justify-content: space-between;
         margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         @include md-down {
+            @include display-flex;
+            justify-content: space-between;
             overflow-x: scroll;
         }
         @include lg-down {

@@ -1,3 +1,6 @@
+// File Path - cd web_theme
+// Compile cmd - sass --watch sass/customSass.scss:css/customSass.css
+
 // Custom SASS for AndamanMarket.shop
 // 19 May 2020 
 
@@ -24,3 +27,8 @@
 @import "layout/giveCare";
 @import "layout/dataPolicy";
 @import "layout/ad";
+
+// Overwrite CSS
+.slick-track {
+	margin-left: inherit;
+}
